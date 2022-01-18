@@ -2,4 +2,4 @@
 
 modificado con usuario w burriana
 
-modificacion desde reote
+modificacion desde remote
