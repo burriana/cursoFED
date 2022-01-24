@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <div>
+        <h2>Datos basicos</h2>
+        <label for="fname">First name:</label><br />
+        <input
+          type="text"
+          id="fname"
+          name="fname"
+          placeholder="First name"
+          required
+        /><br />
+        <label for="1fslname">First Last name:</label
+        ><label for="2ndlname">Second Last name:</label><br />
+        <input
+          type="text"
+          id="lname"
+          name="lname"
+          placeholder="First Last name"
+        />
+
+        <input
+          type="text"
+          id="2ndlname"
+          name="lname"
+          placeholder="Second Last name"
+        /><br /><br />
+
+        <label for="documentos">Tipo Documento: </label
+        ><label for="tdocumentop">No.Documento:</label><br />
+
+        <select name="documentos" id="documentos">
+          <option value="">Tipo de Documento</option>
+          <option value="dni">DNI</option>
+          <option value="pasaporte">Pasaporte</option>
+          <option value="carnet">Carnet Conducir</option>
+        </select>
+
+        <input
+          type="text"
+          id="fname"
+          name="fname"
+          placeholder="Introduce No. Documento"
+        /><br /><br />
+        <!-- Radio boton -->
+        <label for="gender">Gender</label
+        ><label for="birdhday">Fecha Nacimiento</label><br />
+        <label><input type="radio" name="gender" checked /> Male</label>
+        <label><input type="radio" name="gender" /> Female</label>
+        <!-- Fecha nacimiento -->
+        <input type="date" name="" id="" />
+      </div>
+      <div>
+        <h2>Datos de contacto</h2>
+        <label for="email">Correo electronico</label>
+        <label for="telefono">Telefono</label><br />
+        <input type="email" name="" id="" />
+        <input type="tel" name="" id="" /><br />
+        <!-- radio boton vives a barcelona -->
+        <label for="barcelona">Vives en Barcelona</label><br />
+        <label><input type="radio" name="bcn" checked /> Si</label>
+        <label><input type="radio" name="bcn" /> No</label><br><br>
+        <label for="via">Tipo de via</label>
+        <label for="calle">Calle</label>
+        <label for="numero">Numero</label><br>
+        <select name="tipovia" id="tipovia">
+          <option value="calle">Calle</option>
+          <option value="avenida">Avenida</option>
+          <option value="plaza">Plaza</option>
+          <option value="paseo">Paseo</option>
+        </select>
+        <input type="text" name="calle" id="calle">
+        <input type="number" name="num" id="num"><br>
+        <label for="piso">Piso</label>
+        <label for="puerta">Puerta</label>
+        <label for="escalera">Escalera</label><br>
+        <input type="text" name="piso" id="piso">
+        <input type="text" name="puerta" id="puerta">
+        <input type="number" name="escalera" id="escalera"><br>
+        <label for="cp">Codigo postal</label>
+        <label for="poblacion">Poblacion</label><br>
+        <input type="text" name="cp" id="cp">
+        <input type="number" name="poblacion" id="poblacion"><br><br>
+
+        <!-- Checkbox para tecnologías
+         -->
+         <h2> Lista de Tecnologias</h2>
+         <h3>Tecnologias que te gustaria aprender</h3>
+         <label><input type="checkbox" name="tecnologia" > HTML</label>
+         <label><input type="checkbox" name="tecnologia"> CSS</label>
+         <label><input type="checkbox" name="tecnologia"> Javascript</label><br>
+         <h3>Cual es la más te interesa?</h3>
+         <label><input type="radio" name="tecnologia" > HTML</label>
+         <label><input type="radio" name="tecnologia"> CSS</label>
+         <label><input type="radio" name="tecnologia"> Javascript</label><br>
+         <p>Explica por que te interesa.</p>
+         <textarea name="observacion" id="" cols="30" rows="10"></textarea>
+
+
+    
+      </div>
+
+      <br /><br /><br /><input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
