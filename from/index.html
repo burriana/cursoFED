@@ -10,51 +10,52 @@
     <form action="">
       <div>
         <h2>Datos basicos</h2>
-        <label for="fname">First name:</label><br />
+        <!-- Name -->
+        <label for="fname">Nombre:</label><br />
         <input
           type="text"
           id="fname"
           name="fname"
-          placeholder="First name"
+          placeholder="Nombre"
           required
         /><br />
-        <label for="1fslname">First Last name:</label
-        ><label for="2ndlname">Second Last name:</label><br />
+        <!-- First and Second name -->
+        <label for="1fslname">Primer Apellidoe: </label
+        ><label for="2ndlname"Segundo Apellido: </label><br />
         <input
           type="text"
-          id="lname"
-          name="lname"
-          placeholder="First Last name"
+          id=""
+          name="lname1"
+          placeholder="Primer apellido"
         />
-
         <input
           type="text"
-          id="2ndlname"
-          name="lname"
-          placeholder="Second Last name"
+          id=""
+          name="lname2"
+          placeholder="Segundo apellido"
         /><br /><br />
 
-        <label for="documentos">Tipo Documento: </label
-        ><label for="tdocumentop">No.Documento:</label><br />
+        <!-- Docment type -->
+        <label for="tdocuments">Tipo Documento: </label>
+        <label for="tdocuments">Numero Documento:</label><br />
 
-        <select name="documentos" id="documentos">
-          <option value="">Tipo de Documento</option>
-          <option value="dni">DNI</option>
+        <select name="documents" id="documents">
+          <option value="dni" selected >DNI</option>
           <option value="pasaporte">Pasaporte</option>
           <option value="carnet">Carnet Conducir</option>
         </select>
-
         <input
           type="text"
           id="fname"
           name="fname"
           placeholder="Introduce No. Documento"
         /><br /><br />
+
         <!-- Radio boton -->
-        <label for="gender">Gender</label
-        ><label for="birdhday">Fecha Nacimiento</label><br />
-        <label><input type="radio" name="gender" checked /> Male</label>
-        <label><input type="radio" name="gender" /> Female</label>
+        <label for="gender">Genero: </label
+        ><label for="birdhday">Fecha Nacimiento: </label><br />
+        <label><input type="radio" name="gender" checked /> Hombre</label>
+        <label><input type="radio" name="gender" /> Mujer</label>
         <!-- Fecha nacimiento -->
         <input type="date" name="" id="" />
       </div>
@@ -64,10 +65,11 @@
         <label for="telefono">Telefono</label><br />
         <input type="email" name="" id="" />
         <input type="tel" name="" id="" /><br />
-        <!-- radio boton vives a barcelona -->
+        <!-- radio boton vives en barcelona -->
         <label for="barcelona">Vives en Barcelona</label><br />
         <label><input type="radio" name="bcn" checked /> Si</label>
         <label><input type="radio" name="bcn" /> No</label><br><br>
+
         <label for="via">Tipo de via</label>
         <label for="calle">Calle</label>
         <label for="numero">Numero</label><br>
@@ -79,6 +81,7 @@
         </select>
         <input type="text" name="calle" id="calle">
         <input type="number" name="num" id="num"><br>
+        
         <label for="piso">Piso</label>
         <label for="puerta">Puerta</label>
         <label for="escalera">Escalera</label><br>
@@ -101,7 +104,7 @@
          <label><input type="radio" name="tecnologia" > HTML</label>
          <label><input type="radio" name="tecnologia"> CSS</label>
          <label><input type="radio" name="tecnologia"> Javascript</label><br>
-         <p>Explica por que te interesa.</p>
+         <h4>Explica por que te interesa.<h4/>
          <textarea name="observacion" id="" cols="30" rows="10"></textarea>
 
 
