@@ -4,76 +4,114 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Formulario</title>
-    <style>
-      .izquierda{
-        float: left;
-        clear:left;
-      
-      }
-      .derecha{
-        float:right;
-        clear: right;
-      }
-      ul{
-        list-style: none;
-        float: left;
-      }
-      ul li div span{
-        float: left;
-
-      }
-    </style>
+    <title>Document</title>
+    <link rel="stylesheet" href="style-selector5.css" />
   </head>
   <body>
-    <form action="">
-      <div class="contenedor">
+    <div id="contenedor">
+      <h2>Formulario de alta</h2>
+
+      <form method="post" action="#">
         <ul>
-          <!-- primer bloque de la izquierda -->
           <li class="izquierda">
+            <legend class="titulo" 
+              >Nombre y apellidos <span class="requerido">*</span></legend
+            >
             <div>
-              <span>
-                <input id="nombre" name="nombre" value="" />
-                <label for="nombre">Nombre</label>
+              <span class="completo">
+                <input id="nombre" name="nombre" value="" placeholder="Nombre"/>
+                <!-- <label for="nombre">Nombre</label> -->
               </span>
-                <input id="apellido1" type="text" />
-                <label for="apellido1">Primier apellido</label>
-              <span>
-                <input id="apellido2" type="text" />
-                <label for="apellido2">Segundo apellido</label>
+
+              <span class="completo">
+                <input id="apellido1" name="apellido1" value="" placeholder="Primer apellido"/>
+                <!-- <label for="apellido1">Primer apellido</label> -->
               </span>
-              <span> </span>
+
+              <span class="completo">
+                <input id="apellido2" name="apellido2" value="" placeholder="Segundo apellido"/>
+                <!-- <label for="apellido2">Segundo apellido</label> -->
+              </span>
             </div>
           </li>
-          <!-- primer bloque de la derecha -->
-          <!-- <li class="derecha">
+
+          <li class="derecha">
+            <legend class="titulo" "
+              >Dirección <span class="requerido">*</span></legend>
+            
+
             <div>
-              <span>
-                <input id="direccion" name="direccion" type="text">
-                <label for="direccion">Calle, numero, piso, puerta</label>
+              <span class="completo">
+                <input id="direccion" name="direccion" value="" placeholder="Calle, número, piso, puerta"/>
+                <!-- <label for="direccion">Calle, número, piso, puerta</label> -->
               </span>
-              <span>
-                <input id="cp" name="cp" type="text">
-                <label for="cp">Codigo postala</label>
+
+              <span class="tercio">
+                <input id="codigopostal" name="codigopostal" value="" placeholder="Codigo postak"/>
+                <!-- <label for="codigopostal">Código postal</label> -->
               </span>
-              <span>
-                <input id="municipio" name="municipio" type="text">
-                <label for="municipio">Municipio</label>
+
+              <span class="dostercios">
+                <input id="municipio" name="municipio" value="" placeholder="Municipio" />
+                <!-- <label for="municipio">Municipio</label> -->
               </span>
-              <span>
-                <input id="provincia" name="provincia" type="text">
+
+              <span class="tercio">
+                <select id="provincia" name="provincia" >
+                  <option value=""></option>
+                  <option value="provincia1">Provincia 1</option>
+                  <option value="provincia2">Provincia 2</option>
+                  <option value="provincia3">Provincia 3</option>
+                </select>
                 <label for="provincia">Provincia</label>
               </span>
-              <span>
-                <input id="pais" name="pais" type="text">
-                <label for="pais">Pais</label>
+
+              <span class="dostercios">
+                <select id="pais" name="pais">
+                  <option value=""></option>
+                  <option value="pais1">País 1</option>
+                  <option value="pais2">País 2</option>
+                  <option value="pais3">País 3</option>
+                </select>
+                <label for="pais">País</label>
               </span>
             </div>
+          </li>
 
-          </li> -->
-          <li class="izquierda></li> <li class=" derecha></li>
+          <li class="izquierda">
+            <legend class="titulo" ">Email</legend>
+
+            <div>
+              <span class="completo">
+                <input id="email" name="email" value="" placeholder="email"/>
+              </span>
+            </div>
+          </li>
+
+          <li class="derecha">
+            <legend class="titulo" 
+              >Teléfono <span class="requerido">*</span></legend
+            >
+
+            <div>
+              <span class="mitad">
+                <input id="telefonofijo" name="telefonofijo" required value="" placeholder="Fijo"/>
+                <!-- <label for="telefonofijo">Fijo</label> -->
+              </span>
+
+              <span class="mitad">
+                <input id="telefonomovil" name="telefonomovil" required value="" placeholder="Movil"/>
+                <!-- <label for="telefonomovil">Móvil</label> -->
+              </span>
+            </div>
+          </li>
+
+          <li class="botones">
+            <input id="alta" type="submit" value="Darme de alta &rarr;" />
+          </li>
         </ul>
-      </div>
-    </form>
+      </form>
+    </div>
   </body>
+
 </html>
