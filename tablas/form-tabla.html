@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <style>
+        body{
+            background-color: rgb(175, 175, 175);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #container{
+            background-color: rgb(104, 224, 56);
+            margin: 1em;   
+        }
+        table  {
+            border-collapse: collapse;
+            width: 90%;
+            border-bottom: 5px solid grey;
+            margin:.5em;
+        }
+        table td{
+            border:1px solid #e3e3e3;
+            text-align: left;
+            border: none; 
+            }
+        table tr{
+            height:1em;
+        }
+        table th{
+            text-align: left;
+        }
+        label{
+            font-size: 0.7em;
+            display: block;
+        }
+        h2{
+            border-bottom: 5px solid grey;
+        }
+        #boton{
+            text-align: right;
+            margin: .5em;
+            margin-right: 4.1em;
+        }
+        .requerida{
+            color: red;
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+
+    </style>
+    
+</head>
+<body>
+    <!-- Crear un formulario con una tabla-->
+
+    <div id="container">
+        <form action="#" method="post">
+            <table width =100%>
+                <tbody>
+                    <tr>
+                        <td colspan="3"><h2>Formulario de ALTA</h2><label></label></td>
+                    </tr>
+                    <tr>
+                        <th>Nombre y Apellidos</th>
+                        <th colspan="2">Dirección</th>
+                    </tr>
+                     <tr>
+                        <td ><input type="text"><label for="">Nombre</label></td>
+                        <td colspan="2"><input type="text"> <label for=""> Calle, numero, piso, puerta</label></td>       
+                    </tr>
+                    <tr>
+                        <td ><input type="text"> <label for="">Primer Apellido</label></td>
+                        <td ><input type="text"><label for="">Codigo Postal</label></td>
+                        <td ><input type="text"><label for="">Población</label></td>
+                    </tr>
+                    <tr>
+                        <td "><input type="text"><label for="">Segundo Apellido</label>  </td>
+                        <td ><select name="" id="">
+                            <option value=""></option>
+                            <option value="">Alicante</option>
+                            <option value="">Valencia</option>
+                            <option value="">Castellón</option>
+                        </select><label for="">Provincial</label></td>
+                        <td ><select name="" id="">
+                            <option value=""></option>
+                            <option value="">España</option>
+                            <option value="">Francia</option>
+                            <option value="">Italia</option></select><label for="">Pais</label></td>   
+                    </tr>
+                    <tr>
+                        <th>Email</th>
+                        <th colspan="2">Telefono</th>
+                    </tr>
+                    <tr>
+                        <td ><input type="email" required placeholder="requerido"><label for=""><scan class="requerida">*</scan>e-mail</label></td>
+                        <td ><input type="tel" placeholder="requerido"><label for=""><scan class="requerida">*</scan>Fijo</label></td>
+                        <td ><input type="tel"required placeholder="requerido"><label for="">Movil <scan class="requerida">*</scan></label></td>
+                        <label for=""></label>                       
+                    </tr>
+                    <!-- <tr>
+                        <td></td>
+                        <td></td>
+                        <td> <input  id="boton" type="submit" value="Darme de ALTA &rarr;"</td>
+                    </tr>  -->
+                </tbody> 
+            </table>
+            <div id="boton">   
+                <input  id="boton" type="submit" value="Darme de ALTA &rarr;">
+            </div>
+        </form>
+    </div">
+    
+</body>
+</html>
