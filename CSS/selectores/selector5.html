@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario</title>
+    <style>
+      .izquierda{
+        float: left;
+        clear:left;
+      
+      }
+      .derecha{
+        float:right;
+        clear: right;
+      }
+      ul{
+        list-style: none;
+        float: left;
+      }
+      ul li div span{
+        float: left;
+
+      }
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <div class="contenedor">
+        <ul>
+          <!-- primer bloque de la izquierda -->
+          <li class="izquierda">
+            <div>
+              <span>
+                <input id="nombre" name="nombre" value="" />
+                <label for="nombre">Nombre</label>
+              </span>
+                <input id="apellido1" type="text" />
+                <label for="apellido1">Primier apellido</label>
+              <span>
+                <input id="apellido2" type="text" />
+                <label for="apellido2">Segundo apellido</label>
+              </span>
+              <span> </span>
+            </div>
+          </li>
+          <!-- primer bloque de la derecha -->
+          <!-- <li class="derecha">
+            <div>
+              <span>
+                <input id="direccion" name="direccion" type="text">
+                <label for="direccion">Calle, numero, piso, puerta</label>
+              </span>
+              <span>
+                <input id="cp" name="cp" type="text">
+                <label for="cp">Codigo postala</label>
+              </span>
+              <span>
+                <input id="municipio" name="municipio" type="text">
+                <label for="municipio">Municipio</label>
+              </span>
+              <span>
+                <input id="provincia" name="provincia" type="text">
+                <label for="provincia">Provincia</label>
+              </span>
+              <span>
+                <input id="pais" name="pais" type="text">
+                <label for="pais">Pais</label>
+              </span>
+            </div>
+
+          </li> -->
+          <li class="izquierda></li> <li class=" derecha></li>
+        </ul>
+      </div>
+    </form>
+  </body>
+</html>
