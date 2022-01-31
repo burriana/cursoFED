@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Centrar Cajas</title>
+    <style>
+      *{
+        margin=0;
+        padding=0;
+      }
+      .contenedor{
+        width: 100%;
+      }
+      .left {
+        width: 100%;
+        text-align: left;
+        border: 1px solid blue;
+      }
+
+      .center {
+        width: 50%;
+         text-align: right;
+        margin: auto;
+        width: 50%;
+        border: 1px solid black;      
+      }
+
+      .right {
+      width:30%;
+      text-align: left; 
+      border: 1px solid green;
+      float: right;
+      clear: both;   
+      }
+    </style>
+  </head>
+  <body>
+   <div class="contenedor">
+     <div class="left">Caja ancho 100%</div>
+     <div class="center">Caja ancho 50% <br>Contenedor centrado</div>
+     <div class="right">Caja ancho 30%.</div>
+   </div>
+  </body>
+</html>
