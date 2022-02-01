@@ -4,37 +4,44 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ejercicio 3</title>
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <title>Centrar Cajas</title>
     <style>
-      * {
-        box-sizing: border-box;
+      *{
+        margin=0;
+        padding=0;
       }
-      .container{
-        margin: 5px;
+      .contenedor{
+        width: 80%;
+        margin: auto;
+      }
+      .left {
         width: 100%;
-        display: flex;
-        flex-direction: row;
-        /* border:1px solid black */
+        text-align: left;
+        border: 1px solid blue;
+     
       }
-      .columna {
-        border: 1px solid black;
-        padding: 25px 25px 25px 0px;
-        width: 48%;
-        margin: 0.5em;
+
+      .center {
+        width: 50%;
+        text-align: right;
+        margin: auto;
+        width: 50%;
+        border: 1px solid black;      
       }
-      .columna1 {
-        width: 60%;
-      }
-      .columna2 {
-        width: 25%;
+
+      .right {
+      width:30%;
+      text-align: left; 
+      border: 1px solid green;
+      margin-left: auto;
       }
     </style>
   </head>
   <body>
-    <section class="container">
-      <div class="columna columna1">Contenido princpal</div>
-      <div class="columna columna2">Barra lateral</div>
-    </section>
+   <div class="contenedor">
+     <div class="left">Caja ancho 100%</div>
+     <div class="center">Caja ancho 50% <br>Contenedor centrado</div>
+     <div class="right">Caja ancho 30%.</div>
+   </div>
   </body>
 </html>

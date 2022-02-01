@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 3</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .container{
+        margin: 5px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        /* border:1px solid black */
+      }
+      .columna {
+        border: 1px solid black;
+        padding: 25px 25px 25px 0px;
+        width: 48%;
+        margin: 0.5em;
+      }
+      .columna1 {
+        width: 60%;
+      }
+      .columna2 {
+        width: 25%;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Dos columnas con flex</p>
+    <section class="container">
+     
+      <div class="columna columna1">Contenido princpal</div>
+      <div class="columna columna2">Barra lateral</div>
+    </section>
+  </body>
+</html>

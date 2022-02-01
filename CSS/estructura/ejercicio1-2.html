@@ -9,15 +9,13 @@
   <style>
     *{
       box-sizing: border-box;
-    }
-    .one{
-     
+    }   
+    .two{
       margin: 5px;
-      display:inline-block;
+      /* display:inline-block; */
       width: 100%;
-      border: 1px solid black;
+      /* border:1px solid black */
     }
-    
     .columna{
       border: 1px solid black;
       display:inline-block;
@@ -25,15 +23,21 @@
       /*margin: 5px; */
       width:48%;
     }
-   
+    .columna1{ 
+    width: 60%;
+    }
+    .columna2{
+    width:25%;
+    }
 
   </style>
 </head>
 <body>
-  <section class="one">
-    <div class="columna">Primera columna</div>
-    <div class="columna">Segunda columna</div>
+
+  <section class="two">
+    <p>Dos columnas con diferentes anchos</p>
+    <div class="columna columna1">Contenido princpal</div>
+    <div class="columna columna2">Barra lateral</div>
   </section>
-  
 </body>
 </html>
