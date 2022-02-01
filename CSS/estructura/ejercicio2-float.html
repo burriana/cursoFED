@@ -1,64 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Estructura</title>
-  <style>
-    *{
-      margin=0;
-      padding=0;
-      font-family: Arial, Helvetica, sans-serif;
-      box-sizing: border-box;
-    }
-    .header{
-      background-color: orange;
-      text-align: center;
-      padding: 2em;
-    }
-    
-    .columna{
-      height: 200px;
-      float: left;
-      text-align: left;
-    }
-    .left{
-      background-color: lightblue;
-      width: 25%;
-     
-    }
-    .central{
-      background-color: lightgreen;
-      width: 50%;
-    }
-    .derecha{
-      
-      background-color: rgba(255, 0, 0,0.5);
-      width: 25%;
-    
-    }
-    .footer{
-      clear: both;
-      background-color: pink;
-      text-align: center;
-      padding: .5em;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Estructura</title>
+    <style>
+      *{
+        margin=0;
+        padding=0;
+        font-family: Arial, Helvetica, sans-serif;
+        box-sizing: border-box;
+      }
+      .header{
+        background-color: orange;
+        text-align: center;
+        padding: 2em;
+        /* font-size: 8pt; */
+      }
 
-  </style>
-</head>
-<body>
-  <div class="contenidor">
-    <div class="header">
-      <h2>Encabezado de pagina</h2>
-    </div>
-    <div class="main">
-      <div class="columna left"> Barra Izquierda</div>
-      <div class="columna central">Espacio Central</div>
-      <div class="columna derecha">Barra derecha</div>
-    </div>
-    <div class="footer">Pie de Pagina</div>
-  </div>
+      .main{
+        width: 100%;
+      }
 
-</body>
+      .columna{
+        height: 200px;
+        float: left;
+        text-align: left;
+
+      }
+      .left{
+        background-color: lightblue;
+        width: 25%;
+      }
+      .central{
+        background-color: lightgreen;
+        width: 50%;
+      }
+      .derecha{
+        background-color: rgba(255, 0, 0,0.5);
+        width: 25%;
+      }
+      .footer{
+        clear: both;
+        content: "";
+        background-color: pink;
+        text-align: center;
+        padding: 2.5em;
+        height:5em;
+      }
+      @media  and (max-width:600) {
+        
+      }
+
+      @media screen and (max-width:600){
+        .left{
+          width: 100%;
+        }
+        .central{
+          width: 100%;
+        }
+        .derecha{
+          width: 100%;
+        }
+        .header{
+          font-size: 8pt;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="contenidor">
+      <div class="header">
+        <h2>Encabezado de pagina</h2>
+      </div>
+
+      <div class="main">
+        <div class="columna left">Barra Izquierda</div>
+        <div class="columna central">Espacio Central</div>
+        <div class="columna derecha">Barra derecha</div>
+      </div>
+
+      <div class="footer">Pie de Pagina</div>
+    </div>
+  </body>
 </html>

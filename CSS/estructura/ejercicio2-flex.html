@@ -19,7 +19,7 @@
     }
     .main{
       display: flex;
-      flex-direction: row-reverse;
+      flex-direction: row;
     }
     .columna{
       height: 200px;
@@ -51,6 +51,24 @@
       text-align: center;
       padding: .5em;
     }
+    @media screen and (max-width: 600px){
+      .main{
+        flex-direction: column;
+      }
+      .left{
+        width: 100%;
+      }
+      .central{
+        width: 100%;
+      }
+      .derecha{
+        width: 100%;
+      }
+
+     }
+    ;
+      
+    
 
   </style>
 </head>
