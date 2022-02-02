@@ -3,17 +3,20 @@
     margin: 10px;
     padding:10px;
 }
+
+/* Configuracion inicial -phone- */
 .padre{
-    background: #ffea85;
-    display: flex;
-    flex-direction: row;
+    background: #ffea85;  
 }
 
 .header{
     background-color: #000;
+    border:blue dashed;
 }
     .menu{
         background: #2d4059;
+        border: 1px dashed white;
+        
     }
         .logo{
             background: #ea5455;
@@ -21,6 +24,7 @@
         .nav{
             background: #ea5455;
         }
+        
         .social{
             background: #ea5455;
         }
@@ -32,6 +36,7 @@
             }
 .seccion{
      background-color: #000;
+      border:blue dashed;
 }
     .articulos{
          background: #4e4e6a;
@@ -40,7 +45,7 @@
             background: #1f6cb0;
         }
         .navegacion{
-            background: #70a3c4;
+            background: #70a3c4;    
         }
     .aside{
         background: #f73f52;
@@ -48,18 +53,52 @@
         .publicidad{
             background:#ffea85  ;
         }
-.footer{
-     background-color: #000;
-}
-    .pie{
-        background: #e6af2e;
+    .footer{
+        background-color: #000;
+         border:blue dashed;
     }
+        .pie{
+            background: #e6af2e;
+        }
+        
+  /* Para pasar a tablet */
+@media screen  and (min-width:600px){
+    .menu {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    .logo{
+        flex: 1;
+    }
+    .nav{
+        flex:5;
+    }
+    .social{
+        flex: 1;
+    }  
+}
 
-@media (min-with:400px) {
-    .padre{
-        display:flex;
-        flex-direction: column;
-        background: green;
+/* Para pasar a escritorio */
+@media screen  and (min-width:800px){
+    .seccion{
+        display: flex;
+    }
+    .articulos{
+        display: flex;
+        flex-wrap: wrap;
+        flex: 2;
+    }
+    .articulo{
+        flex:1 1 40%;
+    }
+    .navegacion{
+        flex: 1 1 100%;
+    }
+    .aside{
+        flex: 1;
     }
     
-}
+} 
+
+  
+

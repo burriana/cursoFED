@@ -1,0 +1,38 @@
+  /* Para pasar a tablet */
+@media screen  and (min-width:600px){
+    .menu {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    .logo{
+        flex: 1;
+    }
+    .nav{
+        flex:5;
+    }
+    .social{
+        flex: 1;
+    }  
+}
+
+/* Para pasar a escritorio */
+@media screen  and (min-width:800px){
+    .seccion{
+        display: flex;
+    }
+    .articulos{
+        display: flex;
+        flex-wrap: wrap;
+        flex: 2;
+    }
+    .articulo{
+        flex:1 1 40%;
+    }
+    .navegacion{
+        flex: 1 1 100%;
+    }
+    .aside{
+        flex: 1;
+    }
+    
+} 
