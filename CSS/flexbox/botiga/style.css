@@ -1,0 +1,65 @@
+*{
+    box-sizing: border-box;
+    margin: 10px;
+    padding:10px;
+}
+.padre{
+    background: #ffea85;
+    display: flex;
+    flex-direction: row;
+}
+
+.header{
+    background-color: #000;
+}
+    .menu{
+        background: #2d4059;
+    }
+        .logo{
+            background: #ea5455;
+        }
+        .nav{
+            background: #ea5455;
+        }
+        .social{
+            background: #ea5455;
+        }
+        .banner{
+            background: #f07b3f;
+        }
+            h1{
+                background:#ffd460 ;
+            }
+.seccion{
+     background-color: #000;
+}
+    .articulos{
+         background: #4e4e6a;
+    }
+        .articulo{
+            background: #1f6cb0;
+        }
+        .navegacion{
+            background: #70a3c4;
+        }
+    .aside{
+        background: #f73f52;
+    }
+        .publicidad{
+            background:#ffea85  ;
+        }
+.footer{
+     background-color: #000;
+}
+    .pie{
+        background: #e6af2e;
+    }
+
+@media (min-with:400px) {
+    .padre{
+        display:flex;
+        flex-direction: column;
+        background: green;
+    }
+    
+}
