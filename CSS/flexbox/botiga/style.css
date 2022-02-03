@@ -1,88 +1,161 @@
+/* Configuracion inicial -phone- */
+.padre{
+    /* background: #ffea85;   */
+}
+
 *{
     box-sizing: border-box;
-    margin: 10px;
-    padding:10px;
+    margin:0px;
+    padding:0px;
     font-family: 'Poppins', arial,sans-serif;
     font-size: 10;
 
 }
-
-/* Configuracion inicial -phone- */
-.padre{
-    background: #ffea85;  
+body{
+    margin: 5px;
 }
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+}
+.logo img{
+    width: 1.5rem;
+    text-align: center;
+}
+.articulo img{
+    width: 5rem;
+}
+
+a{
+    text-decoration: none;
+}
+li :hover{
+color: red;
+font-weight: 600;
+}
+
+
 
 .header{
-    background-color: #000;
-    border:blue dashed;
+    /* background-color: #000; */
+    /* border:blue dashed; */
 }
     .menu{
-        background: #2d4059;
-        border: 1px dashed white;
+        /* background: #2d4059; */
+     }
+        padding: .2rem;
+   
         
-    }
+      
+        
         .logo{
-            background: #ea5455;
+            /* background: #ea5455; */
+            padding: 5px;
+            /* border: 1px solid black; */
+           
         }
+       
         .nav{
-            background:white;
+            /* background:white; */
+            border-bottom: 1px solid black;
             
         }
         
         .social{
-            background: #ea5455;
+            /* background: #ea5455; */
+            /* border: 1px solid black; */
+            display: flex;
+            justify-content: flex-end
+            align-items:center
+        }
+
+        .social,  li{
+            padding-left: 1.2rem
         }
         .banner{
             /* background: #f07b3f; */
+            height: 8rem;
+            /* border: 1px solid black; */
             background-image: url(img/montain.jpg);
         }
             /* h1{
                 background:#ffd460 ;
             } */
 .seccion{
-     background-color: #000;
-      border:blue dashed;
+    /* border: 1px solid black; */
+     /* background-color: #000; */
+      /* border:blue dashed; */
+      padding-top: 1.5rem;
 }
     .articulos{
-         background: #4e4e6a;
+        /* border: 1px solid black; */
+         /* background: #4e4e6a; */
          font-weight: 200;
     }
         .articulo{
-            background: #1f6cb0;
+            /* border: 1px solid black; */
+            /* background: #1f6cb0; */
         }
         .navegacion{
-            background: #70a3c4;    
+            /* background: #70a3c4;     */
+            border: 1px solid black;
         }
     .aside{
-        background: #f73f52;
+        /* background: #f73f52; */
+        border: 1px solid black;
     }
         .publicidad{
-            background:#ffea85  ;
+            /* background:#ffea85  ; */
+            border: 1px solid black;
         }
     .footer{
-        background-color: #000;
-         border:blue dashed;
+        /* background-color: #000; */
+         /* border:blue dashed; */
     }
         .pie{
-            background: #e6af2e;
+            border-bottom: 1px solid black;
+            /* background: #e6af2e; */
         }
+            .paises{
+                flex-direction: column;
+            }
+            .links{
+                flex-direction: column;
+            }
+            .apps{
+                flex-direction: column;
+            }
+
+            .us{
+                justify-content: flex-start;
+            }
+
 
   /* Para pasar a tablet */
 @media screen  and (min-width:600px){
     .menu {
         display: flex;
         flex-wrap: nowrap;
+       
     }
     .logo{
         flex: 1;
     }
     .nav{
-        flex:5;
+        flex:11;
        
     }
     .social{
-        flex: 1;
-    }  
+        flex: 2;
+    }
+    .pie{
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: space-around;
+    }
 }
 
 /* Para pasar a escritorio */
@@ -93,10 +166,10 @@
     .articulos{
         display: flex;
         flex-wrap: wrap;
-        flex: 2;
+        flex: 3;
     }
     .articulo{
-        flex:1 1 40%;
+        flex:1 1 30%;
     }
     .navegacion{
         flex: 1 1 100%;
