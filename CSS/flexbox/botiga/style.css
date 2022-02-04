@@ -1,14 +1,17 @@
 /* Configuracion inicial -phone- */
 .padre{
     /* background: #ffea85;   */
-}
+    min-width: 390px;
+    max-width: 1200px;
+    }
 
 *{
     box-sizing: border-box;
     margin:0px;
     padding:0px;
     font-family: 'Poppins', arial,sans-serif;
-    font-size: 10;
+   
+    font-size: 8;
 
 }
 body{
@@ -24,8 +27,9 @@ ul{
     width: 1.5rem;
     text-align: center;
 }
+
 .articulo img{
-    width: 5rem;
+    width: 10rem;
 }
 
 a{
@@ -59,7 +63,7 @@ font-weight: 600;
        
         .nav{
             /* background:white; */
-            border-bottom: 1px solid black;
+            /* border-bottom: 1px solid black; */
             
         }
         
@@ -78,11 +82,17 @@ font-weight: 600;
             /* background: #f07b3f; */
             height: 8rem;
             /* border: 1px solid black; */
-            background-image: url(img/montain.jpg);
+            background-image: url(img/ciclismo-short.jpeg);
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-            /* h1{
-                background:#ffd460 ;
-            } */
+            h1{
+                /* background:#ffd460 ; */
+                 font-size: xx-large;
+                 color: white;
+            }
 .seccion{
     /* border: 1px solid black; */
      /* background-color: #000; */
@@ -95,20 +105,48 @@ font-weight: 600;
          font-weight: 200;
     }
         .articulo{
-            /* border: 1px solid black; */
+            border-right: 1px solid black;
+            padding: 0.5rem;
+            max-width: 400px;
+            height: ;
             /* background: #1f6cb0; */
         }
+            .img, .precio{
+                width: 100%;
+            }
+            .precio{
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+                font-weight: bold;
+            }
+            .titulo{
+                text-align: center;
+                font-weight: bold;
+            }
+
+            .descripcion{
+                font-style: italic;
+                font-size: 0.8rem;
+            }
+            input{
+                width: 100%;
+                padding: 0.5rem;
+            }
         .navegacion{
             /* background: #70a3c4;     */
-            border: 1px solid black;
+            /* border: 1px solid black; */
         }
     .aside{
         /* background: #f73f52; */
-        border: 1px solid black;
+       
     }
         .publicidad{
             /* background:#ffea85  ; */
-            border: 1px solid black;
+            padding: 0.5rem;
+        }
+        .publicidad img{
+            width: 10rem;
         }
     .footer{
         /* background-color: #000; */
@@ -152,7 +190,7 @@ font-weight: 600;
     }
     .pie{
         display: flex;
-        flex-wrap: nowrap;
+        flex-wrap:wrap;
         flex-direction: row;
         justify-content: space-around;
     }
@@ -166,7 +204,8 @@ font-weight: 600;
     .articulos{
         display: flex;
         flex-wrap: wrap;
-        flex: 3;
+        /* flex: 3; */
+        width: 75%;
     }
     .articulo{
         flex:1 1 30%;
@@ -175,7 +214,8 @@ font-weight: 600;
         flex: 1 1 100%;
     }
     .aside{
-        flex: 1;
+        /* flex: 1; */
+        width: 25%;
     }
     
 } 
