@@ -1,0 +1,131 @@
+/* Configuracion generale- */
+.padre {
+  /* display: flex;
+  flex-flow: column nowrap; */
+  min-width: 400px;
+  max-width: 1200px;
+}
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Poppins", arial, sans-serif;
+  font-size: 8;
+}
+body {
+  margin: 1rem;
+}
+a {
+  text-decoration: none;
+}
+li :hover {
+  color: red;
+  font-weight: bold;
+}
+ul {
+  list-style: none;
+  display: flex;
+  
+  justify-content: space-around;
+}
+.logo img {
+  width: 2rem;
+}
+
+/* Header */
+header {
+  display: flex;
+  flex-flow: column nowrap;
+  margin-bottom: 1rem;
+}
+.menu {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-center;
+   margin-bottom: 1rem;
+}
+.logo {
+  flex: 1 1 auto;
+}
+.nav {
+  flex: 11 1 auto;
+}
+.social {
+  flex: 1 1 auto;
+}
+.banner {
+  height: 8rem;
+  background-image: url(img/ciclismo-short.jpeg);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   
+}
+h1 {
+  font-size: xx-large;
+  color: white;
+}
+.seccion{
+    display: flex;
+    flex-flow: column nowrap;
+    padding-top: 1rem;
+    border-bottom: .2rem solid grey;
+}
+.productos{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1rem;
+    flex: 3 1 auto;
+}
+.aside{
+    flex: 1 1 auto;
+}
+.articulo{
+     
+    flex-basis: 30%;
+}
+.titulo {
+    font-weight: bold;
+}
+.precio{
+     font-weight: bold;
+}
+input{
+    width: 100%;
+    padding: 1.1rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.pie{
+    display: flex;
+    flex-flow:column wrap;
+   border-bottom: .2rem solid grey;
+   
+    justify-content: space-around;
+}
+.map{
+    flex-flow: column nowrap;
+    
+}
+.us{
+    display: flex; 
+}
+.ft-legal{
+    padding-top: 1rem;
+}
+
+@media screen and (min-width:400px){
+    .menu{
+        flex-flow:row;
+    }  
+}
+@media screen and (min-width:600px){  
+    .seccion{
+        flex-flow:row;
+    }
+    .pie{
+        flex-flow: row wrap;
+    }
+}
