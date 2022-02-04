@@ -10,9 +10,7 @@
     margin:0px;
     padding:0px;
     font-family: 'Poppins', arial,sans-serif;
-   
     font-size: 8;
-
 }
 body{
     margin: 5px;
@@ -46,9 +44,8 @@ font-weight: 600;
     /* background-color: #000; */
     /* border:blue dashed; */
 }
-    .menu{
-        /* background: #2d4059; */
-     }
+    
+     /* Estilo del menu */
         padding: .2rem;
    
         
@@ -108,7 +105,8 @@ font-weight: 600;
             border-right: 1px solid black;
             padding: 0.5rem;
             max-width: 400px;
-            height: ;
+           
+            
             /* background: #1f6cb0; */
         }
             .img, .precio{
@@ -117,7 +115,7 @@ font-weight: 600;
             .precio{
                 display: flex;
                 flex-wrap: nowrap;
-                justify-content: space-between;
+                justify-content: space-around;
                 font-weight: bold;
             }
             .titulo{
@@ -190,8 +188,8 @@ font-weight: 600;
     }
     .pie{
         display: flex;
-        flex-wrap:wrap;
-        flex-direction: row;
+        flex-flow: row wrap;
+        
         justify-content: space-around;
     }
 }
