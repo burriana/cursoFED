@@ -9,11 +9,16 @@
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
-  font-family: "Poppins", arial, sans-serif;
+  font-family: "Insolata","Poppins", arial, sans-serif;
   font-size: 8;
+}
+@font-face{
+  font-family: "MajorMonoDisplay";
+  src: url(./fonts/MajorMonoDisplay-Regular.ttf);
 }
 body {
   margin: 1rem;
+  font-family: "Insolata";
 }
 a {
   text-decoration: none;
@@ -41,11 +46,13 @@ header {
 .menu {
   display: flex;
   flex-flow: column nowrap;
-  align-items: flex-center;
-   margin-bottom: 1rem;
+  align-items: flex-end;
+  margin-bottom: 1rem;
 }
 .logo {
-  flex: 1 1 auto;
+  /* flex: 1 1 auto; */
+  font-size:3rem;
+  font-family:"MajorMonoDisplay",Arial, Helvetica, sans-serif
 }
 .nav {
   flex: 11 1 auto;
@@ -53,46 +60,60 @@ header {
 .social {
   flex: 1 1 auto;
 }
-.banner {
+/* Seccion banner */
+section.banner {
   height: 8rem;
-  background-image: url(img/ciclismo-short.jpeg);
+  background-image: url(./img_optica/banner1.jpg);
   background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 250px;
    
 }
 h1 {
   font-size: xx-large;
   color: white;
 }
+/* ----------------------------------------------- */
 .seccion{
     display: flex;
     flex-flow: column nowrap;
     padding-top: 1rem;
     border-bottom: .2rem solid grey;
 }
-.productos{
+.catalog{
     display: flex;
     flex-flow: row wrap;
     gap: 1rem;
     flex: 3 1 auto;
 }
+.catalog img {
+  width: 250px;
+}
 .aside{
     flex: 1 1 auto;
 }
-.articulo{
-     
-    flex-basis: 30%;
-}
-.titulo {
-    font-weight: bold;
+/* .product{
+  display: inline-flex;
+  justify-content: center;
+  flex-flow: column;
+    border: 1px solid grey;
+    padding: 1rem;
+    flex-basis:45%;
+} */
+
+.card{
+  border: 1px solid grey;
+  justify-content: center;
 }
 .precio{
      font-weight: bold;
+     flex-flow: column;
+     justify-content: flex-end;
 }
 input{
-    width: 100%;
+    /* width: 100%; */
     padding: 1.1rem;
     font-weight: bold;
     font-size: 1.2rem;
@@ -116,16 +137,16 @@ input{
     padding-top: 1rem;
 }
 
-@media screen and (min-width:400px){
+@media screen and (min-width:768px){
     .menu{
         flex-flow:row;
-    }  
+    }  .pie{
+      flex-flow: row wrap;
+  }
 }
-@media screen and (min-width:600px){  
+@media screen and (min-width:992px){  
     .seccion{
         flex-flow:row;
     }
-    .pie{
-        flex-flow: row wrap;
-    }
+   
 }

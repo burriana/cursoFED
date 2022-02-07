@@ -6,22 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tienda</title>
     <!-- Font Awesome CDN embed code! -->
-    <script src="https://use.fontawesome.com/d03d370ed0.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- <script src="https://use.fontawesome.com/d03d370ed0.js"></script> -->
     <!-- Google fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600&display=swap"
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="style.css" />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <link rel="stylesheet" href="./css/index.css">
   </head>
   <body>
     <main class="padre">
+  <!--Header  -->
       <header class="header">
+        <!-- menu -->
         <div class="menu">
-          <div class="logo"><img src="img/logo.png" alt="" /></div>
-          <div class="nav">
-            <ul>
+          <div class="logo">LOGGO</div>
+          <div >
+            <ul class="nav ">
               <li><a href="">Home</a></li>
               <li><a href="">About</a></li>
               <li><a href="">Team</a></li>
@@ -29,138 +33,137 @@
               <li><a href="">Contact</a></li>
             </ul>
           </div>
-          <div class="social">
+          <div class="icon-memu-barras">
             <ul>
               <li>
-                <a href=""
-                  ><i class="fa fa-user-circle" aria-hidden="true"></i
-                ></a>
-              </li>
-              <li>
-                <a href=""
-                  ><i class="fa fa-shopping-cart" aria-hidden="true"></i
-                ></a>
-              </li>
-              <li>
-                <a href=""></a><i class="fa fa-sign-out" aria-hidden="true"></i>
+                  <a href=""><i class="fas fa-bars"></i></a>
               </li>
             </ul>
           </div>
-        </div>
-        <div class="banner">
-          <h1>Tour de Francia 2020</h1>
-        </div>
+          <div >
+            <ul class="user ">
+              <li><a href=""><i class="fa-solid fa-user"></i></i</a></li>
+              <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+              <li><a href=""><i class="fa-solid fa-arrow-right-from-bracket"></i></a></li>
+            </ul>
+          </div>
       </header>
-      <section class="seccion">
-        <div class="productos">
-          <article class="articulo">
-            <p class="titulo">Specialized Tarmac Pro</p>
-            <img src="./img/specialized.jfif" alt="bike" />
-            <p class="descripcion">
-              Fits perfect nice and very comfortable. Definitely work event this
-              item to my friends.
-            </p>
-            <div class="precio">
-              <label for="">450€</label>
-              <label for="">In Stock</label>
-            </div>
-            <input class="submit" type="submit" value="Add to Cart" />
+<!-- banner. La imagen esta en el background-->
+      <section class="banner">
+        <h2>Donde encontras tus gafas ...</h2>
+      </section>
+<!-- Principal -->
+      <section class="principal">
+  <!-- Calalogo de productos -->
+        <section class="catalog">
+          <article class="card">
+            <img src="./img_optica/m1.jpg" class="item"alt="m1" />
+            <div class="description item"> Farenheit </p>
+           <div class="price-cart">
+              <div class="item">155€</div>
+              <a href="" class="iten"><i class="fa-solid fa-cart-arrow-down"></i></a>
+           </div>
           </article>
-          <article class="articulo">
-            <p class="titulo">Specialized Tarmac Pro</p>
-            <img src="./img/specialized.jfif" alt="bike" />
-            <p class="descripcion">
-              Fits perfect nice and very comfortable. Definitely work event this
-              item to my friends.
-            </p>
-            <div class="precio">
-              <label for="">450€</label>
-              <label for="">In Stock</label>
-            </div>
-            <input class="submit" type="submit" value="Add to Cart" />
+          <article class="card">
+            <img src="./img_optica/m2.jpg" class="item"alt="m2" />
+            <div class="description item"> Optiem </p>
+           <div class="price-cart">
+              <div class="item">165€</div>
+              <a href="" class="iten"><i class="fa-solid fa-cart-arrow-down"></i></a>
+           </div>
           </article>
-          <article class="articulo">
-            <p class="titulo">Specialized Tarmac Pro</p>
-            <img src="./img/specialized.jfif" alt="bike" />
-            <p class="descripcion">
-              Fits perfect nice and very comfortable. Definitely work event this
-              item to my friends.
-            </p>
-            <div class="precio">
-              <label for="">450€</label>
-              <label for="">In Stock</label>
-            </div>
-            <input class="submit" type="submit" value="Add to Cart" />
+          <article class="card">
+            <img src="./img_optica/m3.jpg" class="item"alt="m3" />
+            <div class="description item"> Excelsior </p>
+           <div class="price-cart">
+              <div class="item">185€</div>
+              <a href="" class="iten"><i class="fa-solid fa-cart-arrow-down"></i></a>
+           </div>
           </article>
-          <article class="articulo">
-            <p class="titulo">Specialized Tarmac Pro</p>
-            <img src="./img/specialized.jfif" alt="bike" />
-            <p class="descripcion">
-              Fits perfect nice and very comfortable. Definitely work event this
-              item to my friends.
-            </p>
-            <div class="precio">
-              <label for="">450€</label>
-              <label for="">In Stock</label>
-            </div>
-            <input class="submit" type="submit" value="Add to Cart" />
+          <article class="card">
+            <img src="./img_optica/m4.jpg" class="item"alt="m4" />
+            <div class="description item"> Radiant </p>
+           <div class="price-cart">
+              <div class="item">195€</div>
+              <a href="" class="iten"><i class="fa-solid fa-cart-arrow-down"></i></a>
+           </div>
+          </article>
+          <article class="card">
+            <img src="./img_optica/s1.jpg" class="item"alt="1" />
+            <div class="description item"> Beach </p>
+           <div class="price-cart">
+              <div class="item">210€</div>
+              <a href="" class="iten"><i class="fa-solid fa-cart-arrow-down"></i></a>
+           </div>
+          </article>
+          <article class="card">
+            <img src="./img_optica/s2.jpg" class="item"alt="s2" />
+            <div class="description item"> All Night </p>
+           <div class="price-cart">
+              <div class="item">210€</div>
+              <a href="" class="iten"><i class="fa-solid fa-cart-arrow-down"></i></a>
+           </div>
           </article>
 
-          <!-- <nav class="navegacion">
-            <ul>
-              <li><a href="">nav1</a></li>
-              <li><a href="">nav2</a></li>
-              <li><a href="">nav3</a></li>
-            </ul>
-          </nav> -->
-        </div>
+         
+         </section>
         <aside class="aside">
-          <div class="publicidad">
-            <p>Publidad</p>
-            <img src="./img/diapadre.jfif" alt="" />
+          <img src="./img_optica/comming-soon.png" width="150px"alt="comming soon">
+         
+          <div class="aside-item">
+            <article class="card-new">
+              <img src="./img_optica/s9.jpg" class="item"alt="1" />
+             
+            </article>
+            <article class="card-new">
+              <img src="./img_optica/s8.jpg" class="item"alt="1" />
+              
           </div>
-          <div class="publicidad">
-            <p>Publicidad</p>
-            <img src="./img/medicos.jfif" alt="" />
+          </article>
+
+         
           </div>
         </aside>
       </section>
       <footer class="footer">
-        <nav class="pie">
-          <div class="us map">
-            <p><b>Contac Us</b></p>
-            <ul class="us">
-              <li>
-                <i class="fa fa-facebook-official" aria-hidden="true"></i>
-              </li>
-              <li><i class="fa fa-twitter-square" aria-hidden="true"></i></li>
-              <li><i class="fa fa-instagram" aria-hidden="true"></i></li>
-              <li><i class="fa fa-linkedin-square" aria-hidden="true"></i></li>
-            </ul>
+        <nav class="webmap-container">         
+           <div>
+              <h3>Contact Us</h3>
+              <ul class="contact">
+                <li><a href=""><i class="fa-brands fa-facebook-square"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-twitter-square"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-tiktok"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-instagram-square"></i></a></li> 
+              </ul>
+           </div>         
+          <div>
+            <h3>Our Locations</h3>
+            <ul class="webmap-item ">
+              <li><a href="">India</a></li>
+              <li><a href="">USA</a></li>
+              <li><a href="">France</a></li>
+              <li><a href="">Japan</a></li>
+              <li><a href="">Germany</a></li>
+            </ul>           
           </div>
-
-          <ul class="paises map">
-            <b>Our Location</b>
-            <li>India</li>
-            <li>USA</li>
-            <li>France</li>
-            <li>Japan</li>
-            <li>Russia</li>
-          </ul>
-          <ul class="links map">
-            <b>Quik Links</b>
-            <li><a href="">Home</a></li>
-            <li><a href="">Category</a></li>
-            <li><a href="">Product</a></li>
-            <li><a href="">Deal</a></li>
-            <li><a href="">Contact</a></li>
-          </ul>
-          <ul class="apps map">
-            <b>Download App</b>
-            <li><a href="">Google Play</a></li>
-            <li><a href="">Window 11</a></li>
-            <li><a href="">App Store</a></li>
-          </ul>
+         <div>
+           <h3>Quik Links</h3>
+            <ul class="webmap-item ">
+              <li><a href="">Home</a></li>
+              <li><a href="">Category</a></li>
+              <li><a href="">Product</a></li>
+              <li><a href="">Deal</a></li>
+              <li><a href="">Contact</a></li>
+            </ul>
+         </div>
+         <div>
+          <h3>Download App</h3>
+           <ul class="webmap-item ">
+             <li><a href="">Google Play</a></li>
+             <li><a href="">Windows 11</a></li>
+             <li><a href="">App Store</a></li>
+           </ul>
+        </div>       
         </nav>
         <section class="ft-legal">
           <ul class="ft-legal-list">
@@ -169,7 +172,7 @@
             <li><a href="">&copy; 2021 Olegario Ballester</a></li>
           </ul>
         </section>
-      </footer>
+      </footer> 
     </main>
   </body>
 </html>
