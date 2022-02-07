@@ -2,34 +2,39 @@
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
-  font-family: "Insolata", "Poppins", arial, sans-serif;
+  font-family: "Poppins", arial, sans-serif;
   font-size: 8;
 }
 @font-face {
   font-family: "MajorMonoDisplay";
   src: url(../fonts/MajorMonoDisplay-Regular.ttf);
 }
-.padre {
+/* .padre {
   width: 100%;
-}
+} */
 
 body {
   /* padding: 0 1rem; */
   min-width: 400px;
   max-width: 1200px;
 }
+i{
+      font-size: 2rem;
+}
 
 /*  Logo navegador del menu y del usuario */
 .menu {
   display: flex;
-  flex-direction: column;          /* Para que este en columnas en el modo phone*/
+  flex-direction: flex;          /* Para que este en columnas en el modo phone*/
   justify-content: space-between;
-  background: lightgrey;
+  align-items: flex-end;
+  /* background: rgba(180, 180,180,.8); */
+  background: rgba(172, 202, 226,.9);
   padding: 1rem 0;
-  position: fixed;
+  /* position: fixed;
   top:0;
   left: 0;
-  right: 0;
+  right: 0; */
 
 }
 
@@ -37,11 +42,12 @@ body {
       display: flex;
 }
 .nav{
-      display: none;
+      display: none; /* Activar en modo tablet*/
+      
 }
 .logo {
   font-family: "MajorMonoDisplay", Arial, Helvetica, sans-serif;
-  font-size: 1, 5rem;
+  font-size: 2rem;
   color: white;
   padding: 0 0.5em;
 }
@@ -66,6 +72,7 @@ ul li a:hover {
   border-radius: 5px;
 }
 
+
 /* Banner */
 section.banner {
   background-image: url(../img_optica/banner1.jpg);
@@ -73,10 +80,11 @@ section.banner {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 250px;
+  height: 300px;
 }
 section.banner h2 {
   color: aliceblue;
+  font-size: 1.9em;
 }
 
 .principal{
@@ -97,8 +105,6 @@ section.catalog {
 .card {
   display: flex;
   flex-direction: column;
- 
-  border: 1px solid #4a4a4a;
   border-radius: 15px;
   padding: .5rem;
   flex-basis: 30%;
@@ -113,8 +119,12 @@ section.catalog {
 .price-cart a:hover{
       color: red;
 }
+.price-cart a:active{
+      background-color: green;
+}
 .card img {
   width: 200px;
+  background: rgb(172, 202, 226);
   /* border: 1px solid black; */
 }
 
@@ -123,7 +133,7 @@ section.catalog {
       display: flex;
       justify-content: space-around;
       padding:1em 0;
-      background: lightgrey;
+      background: rgb(172, 202, 226);
 }
 ul li .webmap_items{
       display: flex;
@@ -133,13 +143,17 @@ ul li .webmap_items{
       display: flex;
 }
 .ft-legal-list{
-      padding: 1rem 0;
+      padding: 1rem;
+      margin: .5rem 0;
       border-top: 3px solid white;
-      background: beig;
+      background: rgb(172, 202, 226);
       display: flex;
       justify-content: space-between;
-      background: lightgrey;
-      font-size: 0.5rem;
+      background:rgb(172, 202, 226);
+      font-size: 0.7rem;
+}
+footer h3{
+      color: rgba(0,0,0,0.7);
 }
 
 /* Aside */
@@ -150,27 +164,25 @@ ul li .webmap_items{
       justify-content: flex-start;
       flex: 1; 
       padding: 1.5rem;
+      margin: 1.5rem;
+      background: rgb(172, 202, 226);
 }
 .aside-item{
-      display: flex;
-      
+      display: flex;  
 }
 .card-new {
       display: flex;
-      flex-direction: row;
-
-      /* border-bottom: 1px solid #4a4a4a; */
+      flex-direction: row;/
       padding: .5rem;
       flex-basis: 30%;
     }
 .card-new img{
       width:200px;
-      border:1px solid black
 }
 
 
 /* Modo tablet */
-@media (min-width:600px){
+@media (min-width:768px){
       .menu{
             flex-direction: row;
       }
@@ -179,6 +191,11 @@ ul li .webmap_items{
       }
       .principal{
             flex-direction: row;
-
       }
-})
+      .nav{
+            display: flex;
+      }
+      .icon-menu-barras{
+            display: none;
+      }
+}
