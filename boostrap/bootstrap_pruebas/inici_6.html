@@ -10,33 +10,28 @@
       rel="stylesheet"
     />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
-    <style>
-      [class*="col"] {
-        padding: 1rem;
-        background: blue;
-        border: 2px solid white;
-        color: white;
-      }
-      .child {
-        background: green;
-      }
-    </style>
   </head>
   <body>
-    <div class="container border">
+    <div class="container">
       <div class="row">
-        <div class="col-md-3 offset-md-9">1</div>
+        <div class="col fs-1 border border-bottom-0">.fs-1 Hola mundo</div>
       </div>
       <div class="row">
-        <div class="col-8 offset-md-2">2</div>
+        <div class="col fs-2">.fs-1 Hola mundo</div>
       </div>
       <div class="row">
-        <div class="col-3 offset-9 offset-md-0">3</div>
+        <div class="col fs-3">.fs-1 Hola mundo</div>
       </div>
-
-      <div class="d-md-none">hide on lg and wider screens</div>
-      <div class="d-none d-lg-block">hide on screens smaller than lg</div>
-
+      <div class="row">
+        <div class="col fs-4 border border-dark">.fs-1 Hola mundo</div>
+      </div>
+      <div class="row">
+        <div class="col fs-5">.fs-1 Hola mundo</div>
+      </div>
+      <div class="row">
+        <div class="col fs-6">.fs-1 Hola mundo</div>
+      </div>
     </div>
+    <div class="container"></div>
   </body>
 </html>
