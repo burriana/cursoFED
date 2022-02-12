@@ -14,27 +14,37 @@
 // console.log("fuera de la funcion "+personaje); // Sonic
 // console.log("fuera de la funcion "+nemesis); // undefined
 
-var a =121;
-var b =16;
+var a = 121;
+var b = 16;
 
-// console.log("Suma = "+(a+=b));
-// console.log("Resta = "+(a-=b));
-// console.log("Multiplicar = "+(a*=b));
-// console.log("Dividir= "+(a/=b));
-// console.log("Resta = "+(a%=b));
+console.log("Suma de "+ a + " y "+ b + " es igual a :" +(a+=b));
+console.log("Restar "+ b + " de "+ a + " es igual a :" +(a-=b));
+
+console.log("Multiplicar "+ a + " por "+ b + " es igual a :" +(a*=b));
+console.log("Divider "+ a + " entre "+ b + " es igual a :" +(a/=b));
+console.log( "Resto  de dividir " + a + " entre " +  b + " es iguall a " + (a%=b));
+console.log(a,b)
+
+var x = 10;
+var z = 3;
+console.log( x + " elevado a " + z + " es " + (x**z));
+x++
+console.log(x);
+x++
+console.log(x);
+x--;
+console.log(x);
 
 
+// Operadores logicos
 var c=7;
 var d=8;
 var e=7;
+// console.log(c +" es igual a "+ d +"?:  "+ (c==d));
+// console.log(c +" es igual  a "+ d +"?:  "+ (c===d));
+// console.log(c +" es diferente a "+ d +"?: "+ (c!=d));
+// console.log(c +" es mayor  que  "+ d +"?: "+ ( c> d));
+// console.log(c +" es menor a "+ d + "?:  " + (c < d));
+// console.log(c +" es mayor o igual que "+ d + "?:  " + (c >= d));
+// console.log(c +" es menor o iqual que "+ d + "?:  " + (c <= d));
 
-
-console.log(c +" es igual a "+ d +"?:  "+ (c==d));
-// console.log( c + " = " d + c==d);
-// console.log(c===d);
-// console.log(c!=d);
-// console.log(c!==d);
-// console.log(c>d);
-// console.log(c<d);
-// console.log(c>=d);
-// console.log(c<=d);

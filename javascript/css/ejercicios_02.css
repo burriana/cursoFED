@@ -1,0 +1,32 @@
+body{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(156, 138, 173);
+
+}
+section{
+  border: 1px solid black;
+  margin: 2rem;
+  padding: 1rem;
+  border-radius: 2rem;
+}
+h2{
+  font-family: Arial, Helvetica, sans-serif;
+}
+button{
+  display: block;
+  background-color: rgba(56, 50, 50, 0.604);
+  color: white;
+  border-radius: 5px;
+  width: 100px;
+}
+.comparar{
+  background-color: azure;
+}
+.par{
+  background: lightgreen;
+}
+.imc{
+  background-color: beige;
+}

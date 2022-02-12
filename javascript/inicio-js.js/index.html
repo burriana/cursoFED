@@ -1,18 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JS</title>
-</head>
-<body>
-  
-  <!-- <h2>Java script next Date()</h2> -->
-    <!-- <script>window.alert("Hola")</script> -->
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Ejercicios 2</title>
+    <link rel="stylesheet" href="../css/ejercicios_02.css">
+  </head>
+  <body>
+    <section class="comparar">
+      <h2>Comparar dos numeros</h2>
+      <input type="text" placeholder="Introduce el primer numero" id="num1" />
+      <input type="text" placeholder="Introduce el segundo numero" id="num2" />
+      <button onclick="comparar()">Comparar</button>
+      <p id="answer"></p>
+    </section>
 
-    <p id="demo"></p>
-  
-    <script src="./main.js"></script>
+    <section class="par">
+      <h2>Numero par o impar</h2>
+    
+      <input type="Text" placeholder="Introduce un numero" id="num" />
+      <button type="button" onclick="isEven()">Submit</button>
+      <p id="answer"></p>
+    </section>
+
+    <section class="imc">
+      <h2>Calculo del IMC</h2>
+      <input type="text" placeholder="Peso en Kg" id="peso" />
+      <input type="text" placeholder="Altura en cm" id="altura" />
+      <button onclick="IMC()">IMC</button>
+      <p id="imc"></p>
+    </section>
+
+    <script src="./ejercicios_02.js"></script>
+    <!-- <script src="./main.js"></script> -->
   </body>
 </html>
