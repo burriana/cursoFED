@@ -46,7 +46,7 @@ if (!(isNaN(x)) && !(isNaN(y))){
 }else{
   text =" Por favor, introduce dos numeros";
 }
-document.getElementById("answer").innerHTML = text;
+document.getElementById("answerComparar").innerHTML = text;
 }
 
 
@@ -69,7 +69,7 @@ function isEven() {
     text = "Error, introduce un numero"
   }
     
-  document.getElementById("answer").innerHTML = text;
+  document.getElementById("answerPar").innerHTML = text;
 }
 
 /*6. Fes un programa que demani a l’usuari l’altura i el pes i mostri per pantalla el seu
@@ -84,5 +84,23 @@ function IMC(){
 /* 7. Considerant la següent assignació: let marca="total"+ 16 +4
 obté per consola total20.*/
 
-let marca = "total" + 16 + 4;
-console.log(marca);
+// let marca = "total" + 16 + 4;
+// console.log(marca)
+
+function factorial() {
+  let n = document.getElementById("nFactorial").value;
+  let inicial = n;
+  let fcat;
+
+  if (n==0 || n==1){
+    fact = 1;
+  }
+  
+  fact = 1;
+  while ( n > 1){
+    fact = n * fact;
+    n--;
+  }
+  let text = inicial + "!= " + fact
+document.getElementById("answerFactorial").innerHTML = text;
+}
