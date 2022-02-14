@@ -57,7 +57,7 @@ function isEven() {
   // Get the value of the input field with id="numb"
   let x = document.getElementById("num").value;
   // If x is Not a Number or less than one or greater than 10
-  let text;
+  let text ;
   if(!(isNaN(x))){
     if(x%2===0){
       text = "Número par"
