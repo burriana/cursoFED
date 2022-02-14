@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<b<h2>Par o impar?</h2>
+<p id="answerPar"></p>33
+
+
+  <script>
+    // Get the value of the input field with id="numb"
+  let x = prompt("Introduce un numero");
+  // If x is Not a Number or less than one or greater than 10
+  let text ;
+  if(!(isNaN(x))){
+    if(x%2===0){
+      text = "Número par"
+    }else{
+      text = "Número impar"
+    }
+
+  }else{
+    text = "Error, introduce un numero"
+  }
+    
+  document.getElementById("answerPar").innerHTML = text;
+  </script>
+</body>
+</html>

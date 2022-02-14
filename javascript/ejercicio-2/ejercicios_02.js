@@ -1,26 +1,25 @@
 /* 1. Crea dues variable numèriques i assigna dos números, Suma’ls i mostra el valor per
 consola.*/
 
-let a = 33;
-let b = 100;
-let suma = a + b;
+//let a = 33;
+//let b = 100;
+//let suma = a + b;
 console.log(" La suma de " + a + " y " + b + " es igual a " + suma)
 
 
 /* 2. Utilitzant tant les cometes simples com les dobles per a inicialitzar la variable, crea
-un programa que mostri en una finestra:
-I’m = I am
-You’re = You are */
+un programa que mostri en una finestra:*/
+let im=" I'\m = I am"
+let ya="You\'re = You are"
+windoww.alert(im +"\n" + ya);
 
-console.log("I'm = I am ");
-console.log("Yuo're = You are");
 
 /*3. Implementa un programa que comprovi que les dades introduïdes són números.*/
 
-let numero = 0;
-let resultado;
-resultado = !(isNaN(numero));
-console.log(resultado)
+//let numero = prompt("Introduce un numero");
+//alert(!( isNaN(numero)));
+
+
 
 /*4. Fes un programa que demani dos números a l’usuari i informi per pantalla de quin és
 el menor i el major, o si són iguals.*/
@@ -84,8 +83,8 @@ function IMC(){
 /* 7. Considerant la següent assignació: let marca="total"+ 16 +4
 obté per consola total20.*/
 
-// let marca = "total" + 16 + 4;
-// console.log(marca)
+let marca = "total" + (16 + 4);
+console.log(marca)
 
 function factorial() {
   let n = document.getElementById("nFactorial").value;

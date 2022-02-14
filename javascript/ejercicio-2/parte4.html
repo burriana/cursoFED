@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    c
+
+    <script>
+      let x = prompt("Introduce un Primer numero");
+      let y = prompt("Introduce un Segundo numero");
+      let text;
+      if (!isNaN(x) && !isNaN(y)) {
+        if (x < y) {
+          text = x + " es menor que " + y;
+        } else if (x > y) {
+          text = x + " es mayor que " + y;
+        } else {
+          text = x + " =  " + y;
+        }
+      } else {
+        text = " Por favor, introduce dos numeros";
+      }
+      document.getElementById("answerComparar").innerHTML = text;
+    </script>
+  </body>
+</html>

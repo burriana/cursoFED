@@ -1,0 +1,20 @@
+Algoritmo:
+Conjunto secuencial, definido y finito de reglas para obtener un determinado resultado en la realización de una actividad.
+----------------------------------------------------------------------------
+Paradigma de programacion:
+Un paradigma de programación es una manera o estilo de programación de software.
+Los lenguajes de programación adoptan uno o varios paradigmas en función del tipo de órdenes que permiten implementar como, por ejemplo, Python o JavaScript, que son multiparadigmas.
+Paradigma declarativo:
+Este paradigma no necesita definir algoritmos puesto que describe el problema en lugar de encontrar una solución al mismo.
+Programación orientada a objetos:
+En este modelo de paradigma se construyen modelos de objetos que representan elementos (objetos) del problema a resolver, que tienen características y funciones.
+Programación reactiva:
+Este paradigma se basa en escuchar lo que emite un evento o cambios en el flujo de datos, en donde los objetos reaccionan a los valores que reciben de dicho cambio.
+
+Hay lenguales multiparadigmas como el Javascript o Python
+-----------------------------------------------------------------------------
+
+1.Ventanas emergentes:
+window.alert('')
+window.promt('')
+window.confirm('')
