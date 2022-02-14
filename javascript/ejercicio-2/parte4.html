@@ -7,11 +7,13 @@
     <title>Document</title>
   </head>
   <body>
-    c
+    <h2>Comparar dos numeros</h2>
+    <p id=answerComparar> </p>
+
 
     <script>
-      let x = prompt("Introduce un Primer numero");
-      let y = prompt("Introduce un Segundo numero");
+      let x = +prompt("Introduce un Primer numero");
+      let y = +prompt("Introduce un Segundo numero");
       let text;
       if (!isNaN(x) && !isNaN(y)) {
         if (x < y) {

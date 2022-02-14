@@ -11,10 +11,11 @@
   <p id="imc"></p>
   
   <script>
-    let peso = prompt("Introduce tu peso en Kg");
-    let altura = prompt("Introduce tu altura en cm");100
+    let peso = +prompt("Introduce tu peso en Kg");
+    let altura = +prompt("Introduce tu altura en cm");100
   
-  let text =peso / ((altura/100)**2);
+  //let text =peso / ((altura/100)**2);
+  let text =(peso /( Math.pow(altura/100),2)).toFixed(2)
 
   document.getElementById("imc").innerHTML=text;
   </script>
