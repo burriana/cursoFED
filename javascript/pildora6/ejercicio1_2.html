@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1.-Elimina tots els espais en blanc de l’inici i del final
+      const producto = "      Monitor 20 Pulgadas    ";
+      cleanProducto = producto.trim();
+
+      console.log(producto);
+      console.log(cleanProducto);
+
+      // 2.-
+      //a. Reemplaça Pulgadas per ‘
+      console.log(cleanProducto.replace("Pulgadas", "'"));
+
+      //b. Obté: 20 Pulgadas.
+      let sinMonitor = cleanProducto.split(" ").slice(-2).join(" ");
+      console.log(sinMonitor);
+
+      //c. Obté: nitor 20.
+      let nitor = cleanProducto.slice(2).split(" ").slice(0, 2).join(" ");
+      console.log(nitor);
+
+      //d. Mostra la primer lletra del teu nom.
+      const name = "Olegario Ballester";
+      const firstLetter = name.substring(0, 1);
+      const secondName = name.split(" ").slice(-1).join(" ");
+      const fullName = firstLetter.concat(". ", secondName);
+      console.log(firstLetter);
+      console.log(secondName);
+      console.log(fullName);
+    </script>
+  </body>
+</html>

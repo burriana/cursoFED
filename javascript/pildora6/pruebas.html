@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const string1 = "A string primitive";
+      const string2 = "Also a string primitive";
+      const string3 = `Yet another string ${7 * 2} primitive`;
+      const string4 = new String("Hola MUndo");
+
+      // console.log(string1)
+      // console.log(string2)
+      // console.log(string3)
+      // console.log(string4)
+
+      // acceso a un caracter
+
+      const name = "Olegario";
+      let a = name.charAt(3);
+      let b = name[3]; // trata el string como un array
+      console.log(name.charCodeAt(3)); // g-->103
+
+      console.log(a, b);
+
+      let s1 = "2 + 2"; // creates a string primitive
+      let s2 = new String("2 + 2"); // creates a String object
+      console.log(eval(s1)); // returns the number 4
+      console.log(eval(s2)); // returns the string "2 + 2"
+      console.log(eval(s2.valueOf())); //  convert Objet in primitive ;returns the number 4
+
+      //string_name .slice(<position1> [, <position2>]):
+      //slice(beginIndex); -->desde el beginIndex hasta el final
+      //slice(beginIndex, endIndex);-->>desde el beginIndex hasta endIndex sin incluirlo
+      console.log(name.slice(3,5));
+      
+      const str = 'asdfghjkl';
+      const strReverse = str.split('').reverse().join('')
+
+    console.log(str)
+    console.log(strReverse)
+    </script>
+  </body>
+</html>

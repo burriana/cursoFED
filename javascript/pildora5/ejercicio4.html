@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <!-- Crea un programa que mostri per pantalla la data en format català. Per
+exemple: 11 de setembre de 1714. -->
+  
+  <script>
+    var fecha= new Date(1714,9,11);
+    var meses =["Enero",'Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Novembre','Diciembre'];
+
+    fechaCatalan = fecha.getDate().toString()+ " de " + meses[fecha.getMonth()-1].toString() + " de  " +fecha.getFullYear().toString();
+
+    console.log(fecha)
+    console.log(fechaCatalan)
+  </script>
+</body>
+</html>

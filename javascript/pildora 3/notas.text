@@ -2,3 +2,10 @@ Constants
 ● MAX_VALUE: retorna el número més gran disponible a JavaScript
 ● MIN_VALUE: retorna el número més petit disponible a JavaScript
 ● NaN: Representa el valor Not a Number
+
+Metodos:
+isFinite()
+isNaN()
+Number()
+parseInt()
+parseFloat()

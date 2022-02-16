@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      5; /*. Realitzar la cerca d'un string en un string origen. Cal ingressar una frase o text (font)
+i després la clau a cercar. En cas de trobar-la, imprimir la posició, altrament una
+llegenda que indiqui que no hi és.*/
+
+
+// 1.-Texto a buscar
+let texto = "Alonso Quijano es un hidalgo -es decir, un noble sin bienes y de escala social baja-, de unos cincuenta años, que vive en algún lugar de La Mancha a comienzos del siglo XVII. Su afición es leer libros de caballería donde se narran aventuras fantásticas de caballeros, princesas, magos y castillos encantados. Se entrega a estos libros con tanta pasión que acaba perdiendo el contacto con la realidad y creyendo que él también puede emular a sus héroes de ficción.";
+
+//2. Palabra buscada
+
+
+function buscarPalabra(key){
+
+  //3. Limpiamos el texto de ",", "-" y hacemos un split con " ".
+  let textoTratado = texto.replace (",","").replace ('-','' ).replace('.','').split(' ')
+  
+  let index = textoTratado.indexOf(key)
+
+  if (index == -1){
+    console.log("La palabra " + key +" no encontrada");
+  }else{
+    console.log(" La palabra " + key + " se encuentra en la posición " + index);
+  }
+}
+buscarPalabra("siglo")
+buscarPalabra("Hola")
+buscarPalabra("pasión")
+
+    </script>
+  </body>
+</html>

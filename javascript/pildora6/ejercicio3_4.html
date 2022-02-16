@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Practicarem amb Split
+      // Separa variable actividad, tenint en compte espai en blanc.
+
+      const actividad = "Estoy aprendiendo Javascript Moderno";
+      let splitActividad = actividad.split(" ");
+      console.log(splitActividad);
+      //Ara fes-ho tenint en compte la coma.
+
+      const hobbies =
+        "Leer, caminar, escuchar musica, escribir, aprender a programar";
+      let splitHobbies = hobbies.split(",");
+      console.log(splitHobbies);
+
+      let splitHobbiesReverse = hobbies.split(",").reverse().join("-");
+      console.log(splitHobbiesReverse);
+
+      //4. Canvia el següent text tot a majúscula.
+      const producto = "Monitor 24 pulgadas ";
+      const upperProducto = producto.toUpperCase();
+      console.log(producto);
+      console.log(upperProducto);
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,5 @@
+
+ string.charAt(index)  - equilalente-> string[index]
+ string.slice(start,[fin])
+ string.substring(start,[fin])
+ split(string,separador )

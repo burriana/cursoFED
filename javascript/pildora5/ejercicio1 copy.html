@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fechas</title>
+  </head>
+  <body>
+    <script>
+      /* Algoritmo
+
+      1. Definir mes y dia del aniversario.
+      2. Ver fecha de  hoy.
+      3. Definir la fecha del proximo aniversario (año, mes ,dia)
+        3.1 Si ya ha pasado-> El proximo sera en el año siguiente.
+        3.2 En caso contrario -> Es este año.
+      4. Calcular diferencia entre dos fechas :(hoy - proximo aniversario). Nos dara un resultado en ms que podemos para ,por ejemplo a dias.
+      5. Mostrar resultado
+      */
+
+      function diasCumpleaños(mes, dia){
+
+      // 1. Definir mes y dia del aniversario.
+      let mesAniversario = mes;
+      let diaAniversario = dia;
+      let proximoAñoAniversario;
+      let diasQueFaltan = -1000; // Pongo -1000 para detectar errores.
+      let texto = ";";
+      // 2. Ver fecha de  hoy.
+      let hoy = new Date();
+
+      // 3. Proximo aniversario.
+      // Supondo que es este año
+      //   --------------Hoy-----------------Aniversario-------------> Aniversario: Este año
+
+      proximoAñoAniversario = new Date(
+        hoy.getFullYear(),
+        mesAniversario - 1,
+        diaAniversario
+      );
+      // En caso que no lo sea, lo paso al año siguiente
+      //   --------------Aniversario---------Hoy--------------------> Aniversario: Este año ya a ha pasado, luego sera el proximo año
+
+      if (hoy > proximoAñoAniversario) {
+        proximoAñoAniversario = new Date(
+          hoy.getFullYear() + 1,
+          mesAniversario - 1,
+          diaAniversario,
+          
+        );
+      }
+
+      // 4. Calculo diferencia en ms y dias
+      let msDiferencia = proximoAñoAniversario - hoy;
+      let msDia = 1000 * 60 * 60 * 24; // son los miliSegundos(ms) de un día.
+      let diasFaltan =Math.floor( msDiferencia / msDia);
+
+      //5. Muestro en consola
+      console.log(hoy);
+      console.log(proximoAñoAniversario);
+      console.log( " Falta para tu cumpleaños " + diasFaltan + " días");
+      console.log(" x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-")
+    }
+
+    diasCumpleaños(3,6)
+    diasCumpleaños(2,16)
+    diasCumpleaños(1,6)
+   
+    
+
+
+    </script>
+  </body>
+</html>

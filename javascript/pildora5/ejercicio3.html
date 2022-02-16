@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let dia = 6; //+prompt("Dia nacimiento");
+      let mes = 3; //+prompt("Mes nacimiento");
+      let año = 1960; //+prompt("Año nacimiento");
+      let fechaNacimiento = new Date(año,mes,dia)
+      let hoy = new Date();
+
+      //let edadAños = Math.floor( hoy.getFullYear() - año);
+      //let edadMes = Math.floor(hoy.getMonth()- mes);
+
+      let hoyMes = hoy.getMonth() + 1;
+      let hoyDias = hoy.getDate();
+      var edadAños;
+      var edadMes;
+      var edadDias;
+
+      if (hoyMes < mes) {
+        edadAños = Math.floor(hoy.getFullYear() - año - 1);
+      } else {
+        edadAños = Math.floor(hoy.getFullYear() - año);
+      }
+
+      if (hoyDias < dia) {
+        edadMes = Math.floor(Math.abs(hoy.getMonth() - mes));
+       
+      } else {
+        edadMes =12 - Math.floor(Math.abs(hoy.getMonth() - mes));
+        edadDias = hoyDias-dia
+      }
+let faltan = fechaNacimiento.getDate()+hoy
+
+      console.log(edadAños,edadMes,faltan);
+    </script>
+  </body>
+</html>

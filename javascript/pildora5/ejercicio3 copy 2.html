@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let dia = 6; //+prompt("Dia nacimiento");
+      let mes = 3; //+prompt("Mes nacimiento");
+      let año = 1960; //+prompt("Año nacimiento");
+      let fechaNacimiento = new Date(año,mes,dia)
+      let hoy = new Date();
+
+      const msYear= 365*60*60*24*1000;    // segundos en un año
+      const mesesOnYear = 12;
+
+
+      
+      let msDiferenciaAños = hoy - fechaNacimiento;
+      let edadYears = msDiferenciaAños / msYear;
+      let edadMeses = (edadYears - Math.floor(edadYears)) * 12
+
+
+      console.log(msDiferencia);
+      console.log(edadYears,edadMeses);
+
+      function bisiesto(n){
+        if(n%4 === 0){   
+        }
+      }
+
+
+    </script>
+  </body>
+</html>

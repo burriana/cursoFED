@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fechas</title>
+  </head>
+  <body>
+    <script>
+      /* Algoritmo
+
+      1. Definir mes y dia del aniversario.
+      2. Ver fecha de  hoy.
+      3. Definir la fecha del proximo aniversario (año, mes ,dia)
+        3.1 Si ya ha pasado-> El proximo sera en el año siguiente.
+        3.2 En caso contrario -> Es este año.
+      4. Calcular diferencia entre dos fechas :(hoy - proximo aniversario). Nos dara un resultado en ms que podemos para ,por ejemplo a dias.
+      5. Mostrar resultado
+      */
+
+      // 1. Definir mes y dia del aniversario.
+      let mesAniversario = 3;
+      let diaAniversario =6;
+      let proximoAñoAniversario;
+      let diasQueFaltan = -1000;  // Pongo -1000 para detectar errores.
+      let texto=";"
+      // 2. Ver fecha de  hoy.
+      let hoy = new Date();
+      mesHoy = hoy.getMonth()+1;
+      diaHoy = hoy.getDate();
+      anyoHoy = hoy.getFullYear();
+      // 3. Ver si aniversario ya ha pasado o no. Nota: El texto me sirve para comprobar que pasa bien por los condicionales.
+      if( mesHoy > mesAniversario){
+        proximoAñoAniversario = anyoHoy +1;
+         texto ="Tu cumpleaños es el proximo año.";
+        }else if (mesHoy < mesAniversario){
+          proximoAñoAniversario = anyoHoy;
+          texto ="Tu cumplaños es este año , faltan  "  
+        }else{
+         
+          if(diaHoy == diaAniversario){
+            texto = "Tu cumpleaños es hoy. Feliz Aniversario!! "
+          }else if(diaHoy>diaAniversario){
+            texto ="Tu cumpleaños es el proximo año.";
+            proximoAñoAniversario = anyoHoy +1;    
+          }else{
+            proximoAñoAniversario = anyoHoy;
+            texto = "Tu cumpleaños es dentro de unos días. "
+          }
+      }
+      //  4. Calcular diferencia entre hoy y proximo aniversario en ms, y lo paso a dias.
+      let fechaProxima = new Date(proximoAñoAniversario,mesAniversario-1,diaAniversario);
+
+      let msDia =1000*60*60*24; // son los miliSegundos(ms) de un día. 
+
+      if ((diaHoy - diaAniversario) == 0){
+        diasQueFaltan =0
+      }else{
+        diasQueFaltan = ((fechaProxima - hoy) / msDia).toFixed(0); //Al dividir pasamos de ms a dias.
+      }
+      
+      // 5. Mostrar resultado por consola
+      console.log(hoy)
+      console.log(fechaProxima)
+      console.log(texto + diasQueFaltan + " días")
+
+    </script>
+  </body>
+</html>
