@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Realitzar un programa que permeti carregar una adreça de correu i implementar una
+funció que verifiqui si el String té carregat el caràcter @.-->
+
+    <script>
+      let email = "oballesterfe@ uoc.edu";
+
+      function isEmail(string) {
+        let index = string.indexOf("@");
+        console.log(index);
+
+        if ((index == -1)) {
+          //return false;
+          console.log('false')
+        } else {
+         // return true;
+          console.log('true')
+        }  
+      }
+      isEmail("oballesterfe@uoc.edu")
+    </script>
+  </body>
+</html>

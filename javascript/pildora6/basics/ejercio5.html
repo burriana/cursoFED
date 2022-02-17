@@ -14,16 +14,18 @@ llegenda que indiqui que no hi és.*/
 
 
 // 1.-Texto a buscar
-let texto = "Alonso Quijano es un hidalgo -es decir, un noble sin bienes y de escala social baja-, de unos cincuenta años, que vive en algún lugar de La Mancha a comienzos del siglo XVII. Su afición es leer libros de caballería donde se narran aventuras fantásticas de caballeros, princesas, magos y castillos encantados. Se entrega a estos libros con tanta pasión que acaba perdiendo el contacto con la realidad y creyendo que él también puede emular a sus héroes de ficción.";
+let texto = "Alonso Quijano es un hidalgo -es decir, un noble sin bienes y de escala social baja-, de unos cincuenta años, que vive en algún lugar de La Mancha a comienzos del siglo XVII. Su afición es leer libros de caballería donde se narran aventuras fantásticas de caballeros, princesas, magos y $ castillos encantados. Se entrega a estos libros con tanta pasión que acaba perdiendo el contacto con la realidad y creyendo que él también puede emular a sus héroes de ficción.";
 
 //2. Palabra buscada
 
 
 function buscarPalabra(key){
+let simbolos = /[,/-/./&/%/$/]/g;
 
   //3. Limpiamos el texto de ",", "-" y hacemos un split con " ".
-  let textoTratado = texto.replace (",","").replace ('-','' ).replace('.','').split(' ')
-  
+  //let textoTratado = texto.replace (",","").replace ('-','' ).replace('.','').split(' ')
+  let textoTratado = texto.replace (simbolos,'').split(' ')
+
   let index = textoTratado.indexOf(key)
 
   if (index == -1){

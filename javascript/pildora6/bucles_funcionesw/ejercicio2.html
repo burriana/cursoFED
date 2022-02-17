@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 2. Ingressar una paraula o text per teclat i determinar si és o no una paraula palíndrom.
+(Paraula que es llegeix d'igual manera de endavant cap enrere, que de darrere cap
+endavant) -->
+
+    <script>
+      function palindromo(word) {
+
+        let reverseWord = word.split('').reverse().join('');
+
+        if( word == reverseWord ){
+          console.log( word + ": es un palindromo");
+        }else{
+          console.log( word + ": NO es un palindromo");
+        }
+      }
+      palindromo("oso");
+      palindromo("palindromo");
+      palindromo("567765");
+
+
+    </script>
+  </body>
+</html>
