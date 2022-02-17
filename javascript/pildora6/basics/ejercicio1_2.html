@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Ejercio 1 2</title>
   </head>
   <body>
     <script>
@@ -16,15 +16,16 @@
       console.log(cleanProducto);
 
       // 2.-
-      //a. Reemplaça Pulgadas per ‘
-      console.log(cleanProducto.replace("Pulgadas", "'"));
+      //a. Reemplaça Pulgadas per 20 por 40
+      cleanProducto = cleanProducto.replace("20", "40").replace ('Pulgadas',"'");
+      console.log(cleanProducto);
 
-      //b. Obté: 20 Pulgadas.
-      let sinMonitor = cleanProducto.split(" ").slice(-2).join(" ");
+      //b. Obté: 40 Pulgadas.
+      let sinMonitor = cleanProducto.split(" ").slice(-2).join(" ").replace("'",'Pulgadas');
       console.log(sinMonitor);
 
       //c. Obté: nitor 20.
-      let nitor = cleanProducto.slice(2).split(" ").slice(0, 2).join(" ");
+      let nitor = cleanProducto.slice(2).split(" ").slice(0, 2).join(" ").replace('40','20');
       console.log(nitor);
 
       //d. Mostra la primer lletra del teu nom.
@@ -33,7 +34,7 @@
       const secondName = name.split(" ").slice(-1).join(" ");
       const fullName = firstLetter.concat(". ", secondName);
       console.log(firstLetter);
-      console.log(secondName);
+     // console.log(secondName);
       console.log(fullName);
     </script>
   </body>
