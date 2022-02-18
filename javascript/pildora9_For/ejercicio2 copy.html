@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For Ej:2</title>
+  </head>
+  <body>
+    <script>
+      // arbol navidad
+
+      var entero;
+      const simbolo = "*";
+      const blanco = " ";
+      var mensaje;
+    
+        entero = Math.floor(Math.random() * 15 + 10);
+        j = entero - 1;
+        for (let i = 0; i < entero; i++) {
+          j -= 1;
+          mensaje =
+            blanco.repeat(j) + simbolo.repeat(i) + simbolo + simbolo.repeat(i);
+          console.log(mensaje);
+        }
+      
+    </script>
+  </body>
+</html>
