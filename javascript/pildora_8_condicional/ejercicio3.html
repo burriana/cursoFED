@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Condicionales Ej: 3</title>
+  </head>
+  <body>
+    <script>
+      let mensaje = "error";
+
+      switch ("") {
+        case "efectivo":
+          //Statements executed when the
+          mensaje = "Pago en efectivo";
+          break;
+        case "tarjeta":
+          //Statements executed when the
+          mensaje = "Pago con tarjeta";
+          break;
+        case "CodigoPromocional":
+          //Statements executed when the
+          mensaje = "Escribe tu código promocional";
+          break;
+        default:
+          //Statements executed when none of
+         
+          mensaje = "No has definido tu modo de pago.";
+          break;
+      }
+
+      console.log(mensaje);
+    </script>
+  </body>
+</html>

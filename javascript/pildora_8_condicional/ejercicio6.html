@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Condicional Ej: 6</title>
+  </head>
+  <body>
+    <script>
+      const happy = "\uD83D\uDE01";
+      const mad = "\uD83d\uDE08";
+      const neutro = "\uD83d\uDE04";
+      let nota = 7;
+      let mensaje = "error";
+
+      switch (nota) {
+        case 0:
+        case 1:
+        case 2:
+          mensaje = `${mad.repeat(5 - nota)} Muy deficiente`;
+          break;
+        case 3:
+        case 4:
+          mensaje = `${mad.repeat(5 - nota)} Insuficiente`;
+
+          break;
+        case 5:
+          mensaje = `${neutro} Suficiente`;
+
+          break;
+        case 6:
+          mensaje = `${happy.repeat(nota + 1)} Bien`;
+          break;
+        case 7:
+        case 8:
+          mensaje = `${happy.repeat(nota + 1)} Notable`;
+          break;
+        case 9:
+        case 10:
+          mensaje = `${happy.repeat(nota + 1)} Excelente`;
+          break;
+        default:
+          mensaje = "Introduce la nota.";
+          break;
+      }
+
+      console.log(mensaje);
+    </script>
+  </body>
+</html>

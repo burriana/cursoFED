@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Condicional Ej:2</title>
+  </head>
+  <body>
+    <script>
+      let usuario = "";
+      let registrar = false;
+      let editar = false;
+      let eliminar = false;
+      let ver = false;
+      let mensaje = "error";
+
+      if (usuario == "autor") {
+        registrar = true;
+        editar = false;
+        eliminar = false;
+        ver = false;
+        mensaje = ` Registrar: ${registrar}, Editar: ${editar}, Eliminar: ${eliminar}, Ver: ${ver}`;
+      }
+      if (usuario == "editor") {
+        registrar = false;
+        editar = true;
+        eliminar = false;
+        ver = false;
+        mensaje = ` Registrar: ${registrar}, Editar: ${editar}, Eliminar: ${eliminar}, Ver: ${ver}`;
+      }
+      if (usuario == "admin") {
+        registrar = false;
+        editar = true;
+        eliminar = true;
+        ver = true;
+        mensaje = ` Registrar: ${registrar}, Editar: ${editar}, Eliminar: ${eliminar}, Ver: ${ver}`;
+      }
+      if (usuario == "anonimo") {
+        registrar = false;
+        editar = false;
+        eliminar = false;
+        ver = true;
+        mensaje = ` Registrar: ${registrar}, Editar: ${editar}, Eliminar: ${eliminar}, Ver: ${ver}`;
+      } else {
+        registrar = false;
+        editar = false;
+        eliminar = false;
+        ver = false;
+        mensaje = ` Registrar: ${registrar}, Editar: ${editar}, Eliminar: ${eliminar}, Ver: ${ver}`;
+      }
+
+      if (usuario !== ("autor" || "editor" || "admin" || "anonimo")) {
+        mensaje = " No eres un usuario autorizado. Consulta con el administrador.";
+      }
+
+      console.log(mensaje);
+    </script>
+  </body>
+</html>

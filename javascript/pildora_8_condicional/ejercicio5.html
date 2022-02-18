@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Condicional Ej:5</title>
+  </head>
+  <body>
+    <script>
+      let cash = 1115;
+      let valorCompra =20;
+      const happy ="\uD83D\uDE00";
+      const mad ="\uD83d\uDE08"
+
+
+      let cashDisponible = cash - valorCompra;
+      let mensaje = "error"
+
+        // Puede comprar si cash>0 && compra > 100
+
+      mensaje = ((cashDisponible>0) && (valorCompra > 100)) ?"Compra ACEPTADA " + happy.repeat(3) : "Compra  NO aceptada " + mad.repeat(2)
+      console.log(mensaje)
+
+      var f = ['🌑', '🌒', '🌓', '🌔', '🌝', '🌖', '🌗', '🌘'];
+
+
+      // Luna en el URL  https://matthewrayfield.com/articles/animating-urls-with-javascript-and-emojis/
+      
+    function loop() {
+        location.hash = f[Math.floor((Date.now()/100)%f.length)];
+
+        setTimeout(loop, 50);
+    }
+
+    loop();
+    </script>
+  </body>
+</html>
