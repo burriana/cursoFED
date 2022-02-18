@@ -4,12 +4,12 @@ if(condicion){
   bloque TRUE
 }else if{
   otras TRUE
-}else{ç
+}else{
 Ninguna de las anteriores
 }
 
-
 if else  ->     condicion ? bloque TRUE : bloque FALSE
+
 
 switch (expression) {
   case value1:
