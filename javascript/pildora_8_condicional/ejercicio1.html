@@ -9,8 +9,8 @@
 <body>
   <script>
 
-    let cashDisponible = 12345;
-    let totalCarrito = 45600;
+    let cashDisponible = Math.floor(Math.random()*3000);
+    let totalCarrito =  Math.floor(Math.random()*500);;
     let disponible =cashDisponible - totalCarrito;
 
     let mensaje =(disponible >= 0)? `Tienes disponible ${disponible}. `:`No tienes suficiente cash, te faltan ${-disponible}.`
