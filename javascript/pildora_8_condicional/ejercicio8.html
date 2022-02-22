@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 8</title>
+  </head>
+  <body>
+    <script>
+      let efectivo;
+      let credito;
+      let disponible = efectivo + credito;
+      let totalCarrito;
+
+      
+
+      efectivo =300;
+      credito = 400;
+      totalCarrito = 900;
+
+      if(efectivo >= totalCarrito || credito >= totalCarrito){
+        console.log('Puedes comprar con efectivo o con tarjeta')
+      }else if (disponible >= totalCarrito){
+        console.log('Puedes comprar con efectivo y credito')
+      }else{
+        console.log('No dispones de saldo disponible');
+      }
+
+ 
+    </script>
+  </body>
+</html>
