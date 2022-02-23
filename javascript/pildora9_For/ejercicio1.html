@@ -7,13 +7,20 @@
     <title>Document</title>
   </head>
   <body>
+    
     <script>
-      var frase = "La mañana es fria";
-      var fraseSeparada = frase.split(" ");
-      for (let i = 0; i < fraseSeparada.length; i++) {
-        document.write(fraseSeparada[i]);
-       c
+      const n = 10;
+      let total =0;
+      for(i=0; i<n;i++){
+        if(i%2===0){
+          total++
+          console.log(`${i} es par`);
+        }else{
+          console.log(`${i} es impar`);
+        }
       }
+      console.log(`El total de numeros pares es ${total}`);
+
     </script>
   </body>
 </html>

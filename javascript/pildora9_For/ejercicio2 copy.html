@@ -8,22 +8,17 @@
   </head>
   <body>
     <script>
-      // arbol navidad
+      let linea = "";
+      let longLinea = 3;
+      let numeroLineas = 6;
 
-      var entero;
-      const simbolo = "*";
-      const blanco = " ";
-      var mensaje;
-    
-        entero = Math.floor(Math.random() * 15 + 10);
-        j = entero - 1;
-        for (let i = 0; i < entero; i++) {
-          j -= 1;
-          mensaje =
-            blanco.repeat(j) + simbolo.repeat(i) + simbolo + simbolo.repeat(i);
-          console.log(mensaje);
+      for (let i = 0; i < numeroLineas; i++) {
+        for (let j = 0; j <= longLinea; j++) {
+          document.write('*'');
         }
-      
+        document.write('<br>');
+      }
+     
     </script>
   </body>
 </html>

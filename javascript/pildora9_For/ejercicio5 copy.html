@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let frase = "La mañana es fria";
+      let palabra =''
+
+      for (let i = 0; i < frase.length; i++) {
+        let char = frase.charAt(i);
+        if (char === ' '){
+          document.write('<br>');
+         // palabra += '\n'
+        }else{
+          document.write(char);
+          //palabra += char;
+        }
+      
+      }
+      console.log(palabra)
+    </script>
+  </body>
+</html>

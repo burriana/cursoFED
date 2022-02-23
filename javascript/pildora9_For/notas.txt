@@ -1,0 +1,6 @@
+for ([initialization]; [condition]; [final-expression]){
+   statement
+   statement
+   statement
+   statement
+}
