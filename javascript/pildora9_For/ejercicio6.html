@@ -21,10 +21,20 @@
       producto: 'Disco'
       }]
 
-      for (i= 0; i < carrito.length;i++){
-        console.log(carrito[i].producto)
-        document.write(carrito[i].producto + ' ')
-      }
+
+      // con el bucle FOR
+      // for (i= 0; i < carrito.length;i++){
+      //   console.log(carrito[i].producto);   
+      // }
+
+
+      // Con el metodo forEach en el Array
+      carrito.forEach(function(element){
+        console.log(element.producto);       
+      });
+
+
+
     </script>
   </body>
 </html>

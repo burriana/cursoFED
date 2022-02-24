@@ -9,14 +9,15 @@
 <body>
   <script>
 
-    const frase = 'Esta mañana hace frío';
-    const letra = 'a';
-    let contadorLetra = 0;
+    const frase = 'Esta mañana hace frío';          // Asignamos a la variable -frase- el texto a analizar.
+    const letra = 'a';                              // Definimos la -letra- a buscar.
+    let contadorLetra = 0;                          // Declamos el -contadorLetra-  y lo iniciamos con valor cero.
+    
 
-    for (let i=0; i < frase.length ; i++){
-      let char  = frase.charAt(i).toLowerCase();
-      if( char === letra.toLowerCase()){
-        contadorLetra++
+    for (let i=0; i < frase.length ; i++){          // recorremos toda la frase  -letra por letra - con el bucle for.
+      let char  = frase.charAt(i).toLowerCase();    // Asignamos a la variable char el contenido de la posicion i. Todo ello en minusculas.
+      if( char === letra.toLowerCase()){            // Comparamos la letra de la posicion i con la letra buscada.
+        contadorLetra++                             // Si coincide sumara 1 al contadorLetra.
       }
     }
     console.log(`En la frase hay ${contadorLetra} letras - ${letra} -.`);

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // numero secreto a acertar
+      const password = Math.floor(Math.random()*10+1);
+      let intentos = 0;
+      let guessNumber;
+      let maxAttempts = 5;
+      let mensaje = "";
+
+      do {
+        intentos++;
+        guessNumber = +prompt("Introduce un numero entero del 1 al 10.");
+        console.log(guessNumber, intentos);
+      } while (guessNumber !== password && intentos < maxAttempts);
+
+      if (intentos < maxAttempts) {
+        console.log(
+          `Enhorabuena!!! Has acertado el ${intentos} intento el numero ${password}`
+        );
+      } else {
+        console.log(
+          `Has utilizado todos los intentos. El nuemro era: ${password}`
+        );
+      }
+    </script>
+  </body>
+</html>
+1 1
