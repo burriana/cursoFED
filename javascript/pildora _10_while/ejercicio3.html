@@ -9,17 +9,18 @@
 <body>
   <script>
 
-    const numFilas =5;
-    let linea = '';
-
-    for (i=1; i<= numFilas; i++){     //Determina el numero de filas
-      for (i=1; i<= numFilas; i++){   //Dira cuantos * van por fila
-        linea+= '*';
-        console.log(linea)
-      }  
+    let word ='';
+    let contador = 0;
+    const password = 'Fin';
+    
+    do{
+      word = prompt(" Introduce una palabra");
+      contador++
     }
+    while (word !== password);
+    console.log(`Has introducido ${contador} palabras`)
+
 
   </script>
-  
 </body>
 </html>
