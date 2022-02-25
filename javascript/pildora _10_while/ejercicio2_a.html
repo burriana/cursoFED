@@ -15,11 +15,21 @@
      
       do {
         intentos++;
-        guessNumber = +prompt("Introduce un numero entero del 1 al 10.");
-       //console.log(number, intentos);
-      } while (guessNumber1 !== password);
+        guessNumber = +Math.floor(prompt("Introduce un numero entero del 1 al 10."));
+        validarNumero(guessNumber)
+        //console.log(number, intentos);
+      } while (guessNumber !== password);
       console.log(`Has acertado el numero secreto ${password} al ${intentos} intento`);
+
+      function validarNumero(numero){
+        // este entre 1 y 10 ambos incluidos.
+        if(numero <=0 || numero > 10){      // Comprueba que el numero no sea negarivo, ni mayor que 10.
+          alert('Numero no valido')
+        }
+      }
+
+     
+      
     </script>
   </body>
 </html>
-1

@@ -19,18 +19,28 @@
         intentos++;
         guessNumber = +prompt("Introduce un numero entero del 1 al 10.");
         console.log(guessNumber, intentos);
+        validarNumero(guessNumber);
       } while (guessNumber !== password && intentos < maxAttempts);
 
       if (intentos < maxAttempts) {
         console.log(
-          `Enhorabuena!!! Has acertado el ${intentos} intento el numero ${password}`
+          `Enhorabuena!!! Has acertado en  el ${intentos} intento el numero ${password}`
         );
       } else {
         console.log(
           `Has utilizado todos los intentos. El nuemro era: ${password}`
         );
       }
+
+      function validarNumero(numero){
+        // este entre 1 y 10 ambos incluidos.
+        if(numero <=0 || numero > 10){      // Comprueba que el numero no sea negarivo, ni mayor que 10.
+          alert('Numero no valido')
+        }
+      }
+
+
     </script>
   </body>
 </html>
-1 1
+

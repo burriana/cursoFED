@@ -12,13 +12,18 @@
     let word ='';
     let contador = 0;
     const password = 'Fin';
+    const lista = [];
     
     do{
       word = prompt(" Introduce una palabra");
+      lista.push(word)
       contador++
     }
     while (word !== password);
     console.log(`Has introducido ${contador} palabras`)
+    console.log(lista);
+    document.write(`Has introducido ${contador} palabras` +  "<br>")
+    document.write(lista)
 
 
   </script>
