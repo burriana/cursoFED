@@ -9,12 +9,14 @@
   <body>
     <script>
       // numero secreto a acertar
-      const password = Math.floor(Math.random()*10+1);
+
+      //1.-  Generar bumero aleatorio entre 1 y 10
+      const password = Math.floor(Math.random() * 10 + 1);
       let intentos = 0;
       let guessNumber;
       let maxAttempts = 5;
-      let mensaje = "";
 
+      // 2.-Hacertar numero secreto con un numero de intentos determinados
       do {
         intentos++;
         guessNumber = +prompt("Introduce un numero entero del 1 al 10.");
@@ -22,6 +24,7 @@
         validarNumero(guessNumber);
       } while (guessNumber !== password && intentos < maxAttempts);
 
+      // 3.-Imprmir en la consola
       if (intentos < maxAttempts) {
         console.log(
           `Enhorabuena!!! Has acertado en  el ${intentos} intento el numero ${password}`
@@ -32,15 +35,15 @@
         );
       }
 
-      function validarNumero(numero){
+
+      // ------------------- Funcion de validación
+      function validarNumero(numero) {
         // este entre 1 y 10 ambos incluidos.
-        if(numero <=0 || numero > 10){      // Comprueba que el numero no sea negarivo, ni mayor que 10.
-          alert('Numero no valido')
+        if (numero <= 0 || numero > 10) {
+          // Comprueba que el numero no sea negarivo, ni mayor que 10.
+          alert("Numero no valido");
         }
       }
-
-
     </script>
   </body>
 </html>
-

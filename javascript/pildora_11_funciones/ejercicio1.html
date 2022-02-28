@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+function saludar(nombre,apellido,sexo){
+  let saludo =''
+  if(sexo == 'Hombre' ){
+     saludo = 'Bienvenido, ';
+  }else if (sexo == 'Mujer'){
+    saludo = 'Bienvenida, ';
+  }else{
+    saludo = 'Hola, ';
+  }
+
+  return `${saludo}${nombre} ${apellido}.`
+}
+console.log(saludar('Olegario','Ballester'))
+console.log(saludar('Olegario','Ballester','Hombre'))
+console.log(saludar('Maria','García','Mujer'))
+
+
+  </script>
+</body>
+</html>

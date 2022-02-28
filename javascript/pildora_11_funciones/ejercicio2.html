@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Calcular edad
+
+      function edad(year) {
+        let hoy = new Date();
+        //let nacimiento = new Date(fecha);
+        let edad = hoy.getFullYear() - year;
+        //let edad = hoy.getFullYear() - nacimiento.getFullYear();
+
+        return edad;
+      }
+      
+     
+      year1 = 2007;
+      console.log(edad(year1));
+      year2 = 2020;
+      console.log(edad(year2));
+      
+
+
+    </script>
+  </body>
+</html>
