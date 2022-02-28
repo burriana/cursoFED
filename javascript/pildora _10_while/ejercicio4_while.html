@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // ver si un numero es primo. Sus unicos divisores son el 1 y el mimso.
+
+      function isPrime(n) {
+        console.time('loop');
+        let prime = true;
+        let divisor = 1;
+        let mensaje =''
+        
+        do{ 
+          if(n%divisor === 0 && divisor !== 1){
+            prime = false
+          }
+          divisor++
+        }while(divisor < Math.floor(Math.sqrt(n)));
+        //}while(divisor < n);
+
+        prime === true ? mensaje = 'es primo': mensaje = 'NO es primo' ;
+        console.timeEnd('loop');
+        console.log(`${n} ${mensaje} ${prime}`)
+
+      }
+
+      console.log(isPrime(298757597));
+      console.log(isPrime(3))
+      console.log(isPrime(8))
+      console.log(isPrime(568494748))
+    </script>
+  </body>
+</html>
