@@ -11,29 +11,30 @@
       // ver si un numero es primo. Sus unicos divisores son el 1 y el mimso.
 
       function isPrime(n) {
-        console.time('loop');
+        console.time('primo');
         let prime = true;
         let divisor = 1;
-        let mensaje =''
+        let mensaje ='';
         
+
         do{ 
           if(n%divisor === 0 && divisor !== 1){
-            prime = false
+            prime = false;
           }
-          divisor++
+          divisor++;
         }while(divisor < Math.floor(Math.sqrt(n)));
         //}while(divisor < n);
 
         prime === true ? mensaje = 'es primo': mensaje = 'NO es primo' ;
-        console.timeEnd('loop');
+        console.timeEnd('primo');
         console.log(`${n} ${mensaje} ${prime}`)
 
       }
 
       console.log(isPrime(298757597));
-      console.log(isPrime(3))
-      console.log(isPrime(8))
-      console.log(isPrime(568494748))
+      console.log(isPrime(3));
+      console.log(isPrime(8));
+      console.log(isPrime(568494748));
     </script>
   </body>
 </html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Donada una adreça de correu, implementa una funció que verifiqui si el email té
+      //carregat el caràcter @.
+
+      function chekEmail(string){
+        if(string.includes('@')){
+          mensaje ='El email es correcto'
+        }else{
+          mensaje ='El email no contiene el simbolo @'
+        }
+        console.log(mensaje)
+      }
+
+      string1=' hiue.@oicr.es'; chekEmail(string1)
+      string2=' hiue.oicr.es'; chekEmail(string2)
+    </script>
+  </body>
+</html>

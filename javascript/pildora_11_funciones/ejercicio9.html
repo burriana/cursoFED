@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function validar(password) {
+
+        password = password.toString();
+        return ochoCaracteres(password)
+               && isLower(password)
+               && isUpper(password)
+               && esNumero(password)
+               && charEspecial(password)
+      }
+
+      string1="1234N567#8v"; console.log(validar(string1));   // Es correcto
+      string2="1234N5"; console.log(validar(string2));        // Fallo menos de 8 caracteres
+      string3="1234567%8v"; console.log(validar(string3));    // Fallo sin mayusculas
+      string4="1234N5678v"; console.log(validar(string4));    // Fallo sin simbolos especiales
+      string5="1234N567#8"; console.log(validar(string5));    // Fallo sin minusculas
+      
+     
+     
+      
+
+      // 1. Contenga 8 o más caracteres.
+      function ochoCaracteres(string) {
+        if (string.length < 8) {
+          return false;
+        }
+        return true;
+       
+
+      }
+
+      // 2. Es un numero
+      function esNumero(string){
+        var value;
+        for (let i = 0; i < string.length; i++) {
+          let char = string.charAt(i);
+          if (!isNaN(char) ) {
+            value = true;break;
+          } else {
+            value = false;
+          }
+        }
+        return value;  
+
+      }
+
+      // 3. Contenga una mayuscula.
+      function isUpper(string) {
+        var charEspecial ='$%&#@';
+        var value;
+        for (let i = 0; i < string.length; i++) {
+          let char = string.charAt(i);
+          if (isNaN(char) && char == char.toUpperCase() && !charEspecial.includes(char)) {
+            value = true;break;
+          } else {
+            value = false;
+          }
+        }
+        return value;  
+      }  
+      
+      // 4. Contenga una minuscula
+      function isLower(string) {
+        var charEspecial ='$%&#@';
+        var value;
+        for (let i = 0; i < string.length; i++) {
+          let char = string.charAt(i)
+          if (isNaN(char) && char == char.toLowerCase() && !charEspecial.includes(char) ) {
+            value = true;break;
+          } else {
+            value = false;
+          }
+        }
+        return value;
+      }
+
+      // 5. Contenga un caracter especial $%&#@
+      function charEspecial(string){
+        var charEspecial ='$%&#@';
+        for (let i = 0; i < string.length; i++) {
+          let char = string.charAt(i)
+          if (charEspecial.includes(char)) {
+            value = true;break;
+          } else {
+            value = false;
+          }
+        }
+        return value;
+
+
+      }
+    </script>
+  </body>
+</html>

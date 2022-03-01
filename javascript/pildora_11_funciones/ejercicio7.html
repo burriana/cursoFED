@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Mitad de la cadena
+      function mitad(string) {
+        let mitad = Math.floor(string.length / 2);
+        console.log(mitad);
+      }
+      mitad("123456789o");
+
+      //Ultima letra
+      function ultimo(string) {
+        //let mitad = Math.floor(string.length / 2);
+        console.log(string.slice(-1));
+
+        // console.log(mitad)
+      }
+      ultimo("123456789oY");
+      // Dar la vuelta
+      function inverso(string) {
+        let inversa = string.split("").reverse().join("");
+        return inversa;
+      }
+      console.log(inverso("hola"));
+      // Intercalar guion entre las letras
+      function guion(string) {
+        let inversa = string.split("").join("-");
+        return inversa;
+      }
+      console.log(guion("hola"));
+
+      // Contar las vocales.
+      function contarVocales(string){
+        let vocales = 'aeiou';
+        let contadorVocales = 0;
+        for(let i=0; i<string.length;i++){
+          let char = string.charAt(i);
+          if(vocales.includes(char)){
+          contadorVocales++}
+        }
+        return contadorVocales
+      }
+      console.log(contarVocales("hola vecino"));
+
+
+    </script>
+  </body>
+</html>

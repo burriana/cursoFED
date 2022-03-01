@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    function captcha(){
+      var captchaChars = "1234567890abcdefghijklmnopqrst";
+      captcha=''
+      for (let i=0; i<5; i++){
+        let aleatorio= Math.floor(Math.random()*20);
+        captcha+= captchaChars.charAt(aleatorio);
+      }
+      return captcha;
+    }
+
+    console.log(captcha())
+  </script>
+</body>
+</html>
