@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+     // let test ="Note that the flags are an integral part of a regular expressioN";
+      let test ="hola hola";
+
+ 
+      
+      // Intercalar guion entre las letras
+      function guion(string) {
+        let conGuion = string.split("").join("-");
+        return conGuion;
+      }
+      console.log( guion(test));
+
+      // Dar vuelta con for
+
+      function vuelta(string){
+        let inversa ='';
+        for (let i = 0; i<string.length ;i++){
+          inversa = string.charAt(i) + inversa;
+        }
+        return inversa;
+      } 
+     // console.log(vuelta(test));
+
+       // Intercalar guion entre las letras
+       let string = test
+       let conGuion = '';
+       for (let i = 0; i< string.length ;i++){
+         if(string.charAt(i) !== ' ' && string.charAt(i+1) !== ' '){
+          conGuion += string.charAt(i)+'-';
+         }else if (string.charAt(i) !== ' ' && string.charAt(i+1) === ' '){
+          conGuion += string.charAt(i) + ' ';
+         }else if (i == string.length){
+           conGuion +=  string.charAt(i)
+         }
+        }
+        console.log(conGuion);
+
+
+
+
+
+    </script>
+  </body>
+</html>

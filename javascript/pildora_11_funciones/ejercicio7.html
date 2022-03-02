@@ -8,49 +8,50 @@
   </head>
   <body>
     <script>
+      let test ="Note that the flags are an integral part of a regular expressioN";
+
       // Mitad de la cadena
       function mitad(string) {
-        let mitad = Math.floor(string.length / 2);
-        let resultado = string.slice(0,mitad)
-        console.log(resultado);
+        let mitad = Math.ceil(string.length / 2);
+        let resultado = string.slice(0, mitad);
+        return resultado;
       }
-      mitad("123456789o");
+      console.log(mitad(test));
 
       //Ultima letra
       function ultimo(string) {
-        //let mitad = Math.floor(string.length / 2);
-        console.log(string.slice(-1));
-
-        // console.log(mitad)
+        let resultado = string.slice(-1);
+        return resultado;
       }
-      ultimo("123456789oY");
+      console.log(ultimo(test));
+
       // Dar la vuelta
       function inverso(string) {
-        let inversa = string.split("").reverse().join("");
+        let inversa = string.toString().split("").reverse().join("");
         return inversa;
       }
-      console.log(inverso("hola"));
+      console.log(inverso(test));
+
       // Intercalar guion entre las letras
       function guion(string) {
-        let inversa = string.split("").join("-");
-        return inversa;
+        let conGuion = string.split("").join("-");
+        return conGuion;
       }
-      console.log(guion("hola"));
+      console.log( guion(test));
 
       // Contar las vocales.
-      function contarVocales(string){
-        let vocales = 'aeiou';
+      function contarVocales(string) {
+        let vocales = "aeiouAEIOU";
         let contadorVocales = 0;
-        for(let i=0; i<string.length;i++){
+        for (let i = 0; i < string.length; i++) {
           let char = string.charAt(i);
-          if(vocales.includes(char)){
-          contadorVocales++}
+          if (vocales.includes(char)) {
+            contadorVocales++;
+          }
         }
-        return contadorVocales
+        return contadorVocales;
       }
-      console.log(contarVocales("hola vecino"));
-
-
+      console.log(contarVocales(test));
     </script>
   </body>
 </html>

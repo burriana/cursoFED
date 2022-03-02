@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function validar(password) {
+        password = password.toString();
+        return (
+          ochoCaracteres(password)
+          && isLower(password)
+          && isUpper(password)
+          && esNumero(password)
+          && charEspecial(password)
+        );
+       
+      }
+
+      // string1 = "12345678vB#";
+      // console.log(string1, validar(string1)); // Es correcto
+      // string2 = "123vB&";
+      // console.log('Menos de 8 carcateres-> ' +string2,validar(string2)); // Fallo menos de 8 caracteres
+      // string3 = "1234567%8v";
+      // console.log('Sin Mayuscula-> ' + string3, validar(string3)); // Fallo sin mayusculas
+      // string4 = "1234N5678v";
+      // console.log('Sin caracteres especiales-> ' + string4, validar(string4)); // Fallo sin simbolos especiales
+      // string5 = "12345678&M";
+      // console.log('Sin minuscula-> ' + string5, validar(string5)); // Fallo sin minusculas
+
+      // 1. Contenga 8 o más caracteres.
+      function ochoCaracteres(string) {
+        if (string.length < 8) {
+          return false;
+        }
+        return true;
+      }
+
+      // 2. Es un numero
+      function esNumero(string) {
+        const regexp = /\d+/;
+        let found = regexp.test(string);
+        return found;
+      }
+
+      // 3. Es minuscula
+      function isLower(string) {
+        const regexp = /[a-z]/;
+        let found = regexp.test(string);
+        return found;
+      }
+
+      // 4. Es mayuscula
+      function isUpper(string) {
+        const regexp = /[A-Z]/;
+        let found = regexp.test(string);
+        return found;
+      }
+
+      // 5. Sin carcateres especiales
+      function charEspecial(string) {
+        const regexp = /\W+/;
+        let found = regexp.test(string);
+        return found;
+      }
+
+      function check(password){
+        const regexp = /\d+[a-z]+[A-Z]+\W+/;
+        let found = regexp.test(password) && password.length >=8;
+        return found;
+      }
+      //console.log(check('1aB&5678'))
+      string1 = "12345678vB#";
+      console.log(string1, check(string1)); // Es correcto
+      string2 = "123vB&";
+      console.log('Menos de 8 carcateres-> ' +string2,check(string2)); // Fallo menos de 8 caracteres
+      string3 = "1234567%8v";
+      console.log('Sin Mayuscula-> ' + string3, check(string3)); // Fallo sin mayusculas
+      string4 = "1234N5678v";
+      console.log('Sin caracteres especiales-> ' + string4, check(string4)); // Fallo sin simbolos especiales
+      string5 = "12345678&M";
+      console.log('Sin minuscula-> ' + string5, check(string5)); // Fallo sin minusculas
+    </script>
+  </body>
+</html>
