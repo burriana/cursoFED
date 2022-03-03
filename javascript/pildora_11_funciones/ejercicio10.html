@@ -13,14 +13,18 @@
       var captchaChars = "1234567890abcdefghijklmnopqrst";
       captcha=''
       for (let i=0; i<5; i++){
-        let aleatorio= Math.floor(Math.random()*20);
+        let aleatorio= Math.floor(Math.random()*captchaChars.length);
         captcha+= captchaChars.charAt(aleatorio);
       }
       return captcha;
     }
+    function validarCaptcha(solution){
+      let captchaNew = captcha();
+      alert(captchaNew);
+    }
 
   
-  console.log(captcha())
+  //console.log(captcha())
 
     
   </script>

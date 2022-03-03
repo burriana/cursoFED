@@ -68,13 +68,14 @@
       }
 
       function check(password){
-        const regexp = /\d+[a-z]+[A-Z]+\W+/;
-        let found = regexp.test(password) && password.length >=8;
+        //const regexp = /(\d+[a-z]+[A-Z]+\W+)/;
+        const regexp =/^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])(?=\w*\W)\S{8,12}$/;
+        let found = regexp.test(password) //&& password.length >=8;
         return found;
       }
       //console.log(check('1aB&5678'))
       string1 = "12345678vB#";
-      console.log(string1, check(string1)); // Es correcto
+      console.log('Cumple todo-> ' + string1, check(string1)); // Es correcto
       string2 = "123vB&";
       console.log('Menos de 8 carcateres-> ' +string2,check(string2)); // Fallo menos de 8 caracteres
       string3 = "1234567%8v";

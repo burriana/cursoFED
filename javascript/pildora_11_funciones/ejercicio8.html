@@ -9,15 +9,22 @@
   <body>
     <script>
       function dniLetter(dni) {
+        let dniNumero=dni.slice(0,8);
+        let dniLetra= dni.slice(-1);
         const lletres = "TRWAGMYFPDXBNJZSQVHLCKE";
-        let letter = lletres.charAt(parseInt(dni) % 23);
-        return letter;
+        let letter = lletres.charAt(parseInt(dniNumero) % 23);
+        if (dniLetra == letter){
+          return true;
+        }else{
+          return false;
+        }
+        
       }
 
-      const dni1 = "73375746";
-      console.log(`${dni1}${dniLetter(dni1)}`);
-      const dni2 = "23375647";
-      console.log(`${dni2}${dniLetter(dni2)}`);
+      const dni1 = "73375746L";
+      console.log(`${dni1} ${dniLetter(dni1)}`);
+      const dni2 = "23375647X";
+      console.log(`${dni2} ${dniLetter(dni2)}`);
     </script>
   </body>
 </html>
