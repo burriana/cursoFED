@@ -4,27 +4,30 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>DNI</title>
   </head>
   <body>
     <script>
+
+      // Devolver verdadero o falso si la letra el DNI esta bien calculada
       function dniLetter(dni) {
-        let dniNumero=dni.slice(0,8);
-        let dniLetra= dni.slice(-1);
+        const dniNumero = parseInt(dni.slice(0,8));
+        const dniLetra = dni.slice(-1).toUpperCase();
         const lletres = "TRWAGMYFPDXBNJZSQVHLCKE";
-        let letter = lletres.charAt(parseInt(dniNumero) % 23);
-        if (dniLetra == letter){
+        const letter = lletres.charAt(dniNumero % 23);
+        if (dniLetra === letter){
           return true;
         }else{
           return false;
         }
         
       }
-
+    // Test
       const dni1 = "73375746L";
       console.log(`${dni1} ${dniLetter(dni1)}`);
       const dni2 = "23375647X";
       console.log(`${dni2} ${dniLetter(dni2)}`);
+
     </script>
   </body>
 </html>

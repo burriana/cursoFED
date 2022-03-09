@@ -1,32 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <script>
-
-    function captcha(){
-      var captchaChars = "1234567890abcdefghijklmnopqrst";
-      captcha=''
-      for (let i=0; i<5; i++){
-        let aleatorio= Math.floor(Math.random()*captchaChars.length);
-        captcha+= captchaChars.charAt(aleatorio);
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>captcha</title>
+  </head>
+  <body>
+    <script>
+      function captcha() {
+        var captchaChars = "1234567890abcdefghijklmnopqrst";
+        captcha = "";
+        for (let i = 0; i < 5; i++) {
+          let aleatorio = Math.floor(Math.random() * captchaChars.length);
+          captcha += captchaChars.charAt(aleatorio);
+        }
+        return captcha;
       }
-      return captcha;
-    }
-    function validarCaptcha(solution){
-      let captchaNew = captcha();
-      alert(captchaNew);
-    }
+   
+      function validadCaptcha(newCaptcha,params){
+        if (newCaptcha == params){
+          window.alert ('Correcto')
+        }else{
+          window.alert ('Incorrecto')
+        }
+      }
+   
 
-  
-  //console.log(captcha())
-
-    
-  </script>
-</body>
+      let newCaptcha = captcha();
+      let string = window.prompt(`Introduce el password: ${newCaptcha}`)
+      validadCaptcha(newCaptcha,string)
+    </script>
+  </body>
 </html>
