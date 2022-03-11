@@ -1,8 +1,8 @@
 
-//PROTOTYPE:  buy(id), id is a Number
+//PROTOTYPE:  buy(id)
 //DESCRIPTION: Agregate the product with the id to the array at the end
 function buy(id) {
-  cart.push(products.find((producto) => producto.id === id));
+  cart.push(products.find(ele => ele.id === id));
 }
 
 //PROTOTYPE: showArrayAsTable(array), array is an Array
@@ -17,67 +17,54 @@ function cleanArray(array) {
   array.length = 0;
 }
 
-
-
-// PROTOTYPE: SubTotal(array) . Array is an Array
+// PROTOTYPE: Void subTotal().
 // DESCRIPTION: Compute the adition by type.
+
 function subTotal(){ 
-  console.table(subtotal);
   for ( key in subtotal){
-    //console.log(key);
-    console.log(key.value);
     cart.forEach(element => {
        if( element.type === key){
-         console.log(element.type,key,element.price);
-       key.value += element.price   /// No funciona
+       (subtotal[key].value) += element.price
        }
     })
-    console.log(key.value);
   }
-  //return subtotal
-  console.table(subtotal);
+  return subtotal
+  //console.table(subtotal) 
   };
 
+// PROTOTYPE: Void calculateTotal().
+// DESCRIPTION: Compute the adition of the cart.
+function calculateTotal(){
+  let total = 0;
+  for(key in subtotal){
+    total += subtotal[key].value
+    console.log(`Subtotal de ${key} : ${subtotal[key].value}`);
+  }
+  // return total;
+console.log(`--- Total de la compra por Categoria: ${total.toFixed(3)}€---`)
+}
+
+function computeTotal(array){
+  let total = 0;
+  array.forEach(ele =>{
+    console.log(`Valor de ${ele.name} es: ${ ele.price}`);
+    total += ele.price
+  })
+  console.log(`--- Total de la compra por Producto: ${total.toFixed(2)}€ ---`)
+}
+
+// function crearObjeto(){
+//   const object = {}
+//   const categorias = []
+
+//   cart.forEach(ele =>{
+//     if( ele.type)
 
 
-
-
-// function subTotal2() {
-//   const grocery = cart.filter((producto) => producto.type === "grocery");
-//   const beauty = cart.filter((producto) => producto.type === "beauty");
-//   const clothes = cart.filter((producto) => producto.type === "clothes");
-
-//   subtotal.grocery.value = grocery
-//     .map((item) => item.price)
-//     .reduce((pev, curr) => pev + curr, 0);
-
-//   subtotal.beauty.value = beauty
-//     .map((item) => item.price)
-//     .reduce((pev, curr) => pev + curr, 0);
-
-//   subtotal.clothes.value = clothes
-//     .map((item) => item.price)
-//     .reduce((pev, curr) => pev + curr, 0);
-
- 
-//   console.log(subtotal);
+//   })
 // }
 
 
-// function subTotal(){
-//  for (let i =0; i< cart.length;i++){
-//   if (cart[i].type == 'grocery'){
-//     subtotal.grocery.value += cart[i].price
-//   }
-//   if (cart[i].type == 'beauty'){
-//     subtotal.beauty.value += cart[i].price
-//   }
-//   if (cart[i].type == 'clothes'){
-//     subtotal.clothes.value += cart[i].price
-//   }
-//  }
-//  console.log(subtotal);
-// }
 
 // PROTOTYPE: Void SubTotal()
 // DESCRIPTION: Compute the adition by type.

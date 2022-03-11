@@ -51,7 +51,7 @@
     {
         id: 9,
         name: 'Toddler Frock',
-        price: 9.99,
+        price: 10.,
         type: 'clothes'
     }
 
