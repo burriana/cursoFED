@@ -1,8 +1,7 @@
-
 //PROTOTYPE:  buy(id)
 //DESCRIPTION: Agregate the product with the id to the array at the end
 function buy(id) {
-  cart.push(products.find(ele => ele.id === id));
+  cart.push(products.find((ele) => ele.id === id));
 }
 
 //PROTOTYPE: showArrayAsTable(array), array is an Array
@@ -15,56 +14,72 @@ function showArrayAsTable(array) {
 //DESCRIPTION: Clean de array. It will come to an empty array.
 function cleanArray(array) {
   array.length = 0;
+ // subTotal()
 }
 
 // PROTOTYPE: Void subTotal().
 // DESCRIPTION: Compute the adition by type.
 
-function subTotal(){ 
-  for ( key in subtotal){
-    cart.forEach(element => {
-       if( element.type === key){
-       (subtotal[key].value) += element.price
-       }
-    })
+function subTotal() {
+  for (key in subtotal) {
+    cart.forEach((element) => {
+      if (element.type === key) {
+        subtotal[key].value += element.price;
+      }
+    });
   }
-  return subtotal
-  //console.table(subtotal) 
-  };
+  return subtotal;
+  //console.table(subtotal)
+}
 
 // PROTOTYPE: Void calculateTotal().
 // DESCRIPTION: Compute the adition of the cart.
-function calculateTotal(){
+function calculateTotal() {
   let total = 0;
-  for(key in subtotal){
-    total += subtotal[key].value
+  for (key in subtotal) {
+    total += subtotal[key].value;
     console.log(`Subtotal de ${key} : ${subtotal[key].value}`);
   }
   // return total;
-console.log(`--- Total de la compra por Categoria: ${total.toFixed(3)}€---`)
+  console.log(`--- Total de la compra por Categoria: ${total.toFixed(3)}€---`);
 }
 
-function computeTotal(array){
+function computeTotal(array) {
   let total = 0;
-  array.forEach(ele =>{
-    console.log(`Valor de ${ele.name} es: ${ ele.price}`);
-    total += ele.price
-  })
-  console.log(`--- Total de la compra por Producto: ${total.toFixed(2)}€ ---`)
+  array.forEach((ele) => {
+    console.log(`Valor de ${ele.name} es: ${ele.price}`);
+    total += ele.price;
+  });
+  console.log(`--- Total de la compra por Producto: ${total.toFixed(3)}€ ---`);
 }
 
-// function crearObjeto(){
-//   const object = {}
-//   const categorias = []
-
-//   cart.forEach(ele =>{
-//     if( ele.type)
 
 
-//   })
-// }
+//reto
+function crearArray(array) {
+  let newArray = [];
+  const categorias = [];
+  const modelo ={ key:{value:0,
+                  descuento:0}}
 
+  array.forEach((ele) => {
+    
+    if (categorias.includes(ele.type) === false) {
+      categorias.push(ele.type);
+      newArray.push({
+                  ele.type: {
+                    value:0,
+                    descuento:0}
+                  })
+    }
+  })
 
+  console.log(categorias);
+  console.log(newArray);
+
+};
+  //console.log(categorias);s
+  
 
 // PROTOTYPE: Void SubTotal()
 // DESCRIPTION: Compute the adition by type.
@@ -75,7 +90,7 @@ function computeTotal(array){
 
 //   keysSub.forEach(ele => {
 //     cartSub[ele] = cart.filter( pro => pro.type === ele)
-   
+
 //   })
 //   //console.log(cartSub);
 //   keysSub.forEach( ele  => {

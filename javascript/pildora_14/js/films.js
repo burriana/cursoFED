@@ -3,19 +3,38 @@ function getAllDirectors(array) {
   //const directors = array.map(ele => ele.director)
   const directors = array.map(({ director }) => director);
   //console.table(directors);
+  
   return directors;
 }
 
+function getDirectorsOnce(array){
+  const directores = array.map(item =>{
+    return [item.director,item]
+  })
+  const directorsMap = new Map(directores);
+  const unicos =[...directorsMap.values()]
+  const direcOrdenados = unicos.sort((a, b) => a.director.localeCompare(b.director))
+  //console.table(unicos)
+  return direcOrdenados
+}
+ 
 // Ejercicio 2: Peliculas de un director
-function getMoviesFromDirector(director) {
-  const films = movies.filter((ele) => ele.director === director);
-  //console.table(films)
+// function getMoviesFromDirector(name,array) {
+//   const films = array.filter(film => film.director === name);
+//   //console.table(films)
+//   return films;
+// }
+
+function getMoviesFromDirector(array,name){
+  const films = array.filter( function(film){
+    return film.director === name;
+  })
   return films;
 }
 
 // Ejercicio 3: Score medio de las peliculas de un  director
-function moviesAverage(director) {
-  const films = getMoviesFromDirector(director);
+function moviesAverage(array,director) {
+  const films = getMoviesFromDirector(array,director);
   const scoreAverage = (
     films.reduce((acc, e) => (acc += e.score), 0) / films.length
   ).toFixed(2);
