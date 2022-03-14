@@ -8,14 +8,6 @@ const movies = [
     score: 9.3
   },
   {
-    title: 'proves',
-    year: 1994,
-    director: 'Frank Darabont',
-    duration: '2h',
-    genre: ['Action'],
-    score: ''
-  },
-  {
     title: 'The Godfather',
     year: 1972,
     director: 'Francis Ford Coppola',
