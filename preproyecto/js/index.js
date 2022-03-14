@@ -62,13 +62,11 @@ function crearObject(array) {
   let newObject = {}
   class Categoria {
     constructor(tipo) {
-      this.tipo = tipo;
+      this.tipo = tipo,
       this.value = 0,
       this.descuento =0
       }
   }
-  
-  
   array.forEach((ele) => {
     
     if (categorias.includes(ele.type) === false) {
@@ -77,41 +75,9 @@ function crearObject(array) {
     }
     newObject = Object.assign(newObject,newArray)
   })
-
-  console.log(categorias);
-  console.log(newArray);
+  //console.log(categorias);
+  //console.log(newArray);
   console.log(newObject)
 
 };
-  //console.log(categorias);s
-  
-
-// PROTOTYPE: Void SubTotal()
-// DESCRIPTION: Compute the adition by type.
-// function subTotal2(){
-//   const keysSub = Object.keys(subtotal) // Creamos un array con los type de subtotal
-//   let cartSub = [] , sum= []
-//   //console.log(keysSub);
-
-//   keysSub.forEach(ele => {
-//     cartSub[ele] = cart.filter( pro => pro.type === ele)
-
-//   })
-//   //console.log(cartSub);
-//   keysSub.forEach( ele  => {
-//     sum[ele] = sumToKeys(cartSub[ele], 'price')
-//   })
-
-//   keysSub.forEach(ele => subtotal[ele].value = sum[ele])
-//   console.log(subtotal);
-// }
-
-// PROTOTYPE: Array sumToKeys(Array array, String key)
-// DESCRIPTION: Compute the adition of the key of the array.
-// function sumToKeys(array,key){
-//   let total = 0
-//   for (let i = 0; i< array.length;i++){
-//     total +=array[i][key]
-//   }
-//   return total
-// }
+ 
