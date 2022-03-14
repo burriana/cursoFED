@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class</title>
+  </head>
+  <body>
+    <script>
+      class Categoria {
+        constructor(tipo) {
+          this.tipo = tipo;
+          this.value = 0,
+          this.descuento =0
+          }
+      }
+    
+
+      const verduras = new Categoria("verduras");
+      console.log(verduras);
+
+
+
+
+
+
+//////////////////////////////////////////////////
+      class Usuario {
+        constructor(nombre,edad) {
+          (this.nombre = nombre), (this.edad = edad);
+        }
+      }
+      class Estudiante extends Usuario{
+        constructor(nombre,edad,estudios){
+          super(nombre,edad);
+        this.estudios = estudios 
+         }
+
+      }
+
+      const olegario = new Estudiante('olegario',62,'Frontend');
+      //console.log(olegario.nombre,olegario.edad,olegario.estudios);
+
+      
+    </script>
+  </body>
+</html>

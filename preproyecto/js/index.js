@@ -56,26 +56,31 @@ function computeTotal(array) {
 
 
 //reto
-function crearArray(array) {
-  let newArray = [];
+function crearObject(array) {
+  const newArray = [];
   const categorias = [];
-  const modelo ={ key:{value:0,
-                  descuento:0}}
-
+  let newObject = {}
+  class Categoria {
+    constructor(tipo) {
+      this.tipo = tipo;
+      this.value = 0,
+      this.descuento =0
+      }
+  }
+  
+  
   array.forEach((ele) => {
     
     if (categorias.includes(ele.type) === false) {
       categorias.push(ele.type);
-      newArray.push({
-                  ele.type: {
-                    value:0,
-                    descuento:0}
-                  })
+      newArray.push(new Categoria(ele.type))
     }
+    newObject = Object.assign(newObject,newArray)
   })
 
   console.log(categorias);
   console.log(newArray);
+  console.log(newObject)
 
 };
   //console.log(categorias);s
