@@ -15,8 +15,8 @@
     <script src="./js/index.js"></script>
     <script>
       buy(1);
-      buy(6);
-      buy(2);
+      buy(1);
+      buy(1);
       // showArrayAsTable(cart);
      
       buy(6);
@@ -24,10 +24,17 @@
       buy(9);
      // cleanArray(cart)
       showArrayAsTable(cart);
-      console.table(subTotal());
-      calculateTotal();
-      computeTotal(cart)
-      crearObject(cart)
+      result = (cartSinRepeticion(cart));
+      console.table(result);
+      totalCompra = totalCarrito(result)
+      console.log(`El total de la compra es: ${totalCompra} €`)
+     // console.table(cartQ);
+      //showArrayAsTable(carritoSinDuplicados);
+      
+      //console.table(subTotal());
+     // calculateTotal();
+     // computeTotal(cart)
+      //crearObject(cart)
     </script>
   </body>
 </html>
