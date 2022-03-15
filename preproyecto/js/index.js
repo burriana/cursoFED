@@ -57,27 +57,19 @@ function computeTotal(array) {
 
 //reto
 function crearObject(array) {
-  const newArray = [];
-  const categorias = [];
-  let newObject = {}
-  class Categoria {
-    constructor(tipo) {
-      this.tipo = tipo,
-      this.value = 0,
-      this.descuento =0
-      }
+
+  const model = {
+    value: 0,
+    discount:0
   }
+const subtotal = {}
+const categorias = []
+  
   array.forEach((ele) => {
-    
     if (categorias.includes(ele.type) === false) {
       categorias.push(ele.type);
-      newArray.push(new Categoria(ele.type))
     }
-    newObject = Object.assign(newObject,newArray)
-  })
-  //console.log(categorias);
-  //console.log(newArray);
-  console.log(newObject)
-
-};
- 
+    categorias.map( cat => subtotal[cat]= model)
+})
+console.log(subtotal)
+}

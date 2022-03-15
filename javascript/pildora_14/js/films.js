@@ -36,41 +36,37 @@ function getMoviesFromDirector(array,name){
 function moviesAverage(array,director) {
   const films = getMoviesFromDirector(array,director);
   const scoreAverage = (
-    films.reduce((acc, e) => (acc += e.score), 0) / films.length
+    films.reduce((acc, film) => (acc += film.score), 0) / films.length
   ).toFixed(2);
+  //return scoreAverage;
   console.table(films);
   console.log(`The average score of ${director} is ${scoreAverage}`);
 }
 //Ejercicio 4: Ordenar las peliculas por orden alfabetico del titulo
+
 function sortByTitle(lista, num) {
-  // const onlyTitle = lista
-  //   .map(({ title }) => title)
-  //   .sort()
-  //   .slice(0, num);
   const ordenado = lista
-    .sort((a, b) => a.title.localeCompare(b.title))
+    //.sort((a, b) => a.title.localeCompare(b.title))
+    .sort((a, b) => a.title < b.title ? -1:1 )
     .slice(0, num);
   return ordenado;
 }
 
 // Ejercicio 5: Ordenar las peliculas por año, y alfabeticamente en el mismo año');
-// function sortByYear(lista,num){
-//   //const byYear = lista.sort((a,b) => a.year - b.year).slice(0,num)
-//   const byYearAndTitle = lista.sort((a,b)=>{
-//     if(a.year < b.year) return -1
-//     if(a.year > b.year) return 1
-//     if(a.title < b.title) return -1
-//     if(a.title > b.title) return 1
-//     return 0
-//   })
-//   const shortList = byYearAndTitle.slice(0,num)
-//   return shortList
-// }
+ function sortByYearTitle(lista){
+  const byYearTitle = lista
+  .sort((a,b) => a.year - b.year ? -1 :1 )
+  .sort((a,b) => a.title < b.title ? -1:1)
+
+  return sortByYearTitle
+  
+}
 function filmOfYear(lista, any) {
   // Get movies of the year
   const filmOfYear = lista
     .filter((film) => film.year === any)
-    .sort((a, b) => a.title.localeCompare(b.title));
+    //.sort((a, b) => a.title.localeCompare(b.title));
+     .sort((a,b) => a.title < b.title ? -1:1)
   return filmOfYear;
 }
 
