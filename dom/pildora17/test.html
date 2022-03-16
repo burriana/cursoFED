@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>DOM...</h1>
+<p id="mainHeading" class="heading">
+This is a heading(not a header)
+</p>
+
+<script>
+
+const el1 = document.querySelector("p").textContent
+console.log(el1)
+const el2 = document.querySelector('.heading').innerHTML
+console.log(el2);
+const el3 = document.querySelector('#mainHeading').textContent
+console.log(el3);
+const el4 = document.getElementById('mainHeading').innerHTML
+console.log(el4);
+const el5 = document.getElementsByClassName('heading').textContent
+console.log(el5);
+</script>
+</body>
+</html>
