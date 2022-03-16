@@ -20,23 +20,21 @@ function cartSinRepeticion(cart){
     }else{
       producto.cantidad += 1
     }
-  
   })
  // Calculo del precio total por producto
   cartSinRepes.forEach(linea =>{
-    linea['total'] = linea.price * linea.cantidad
+    linea['total'] =( linea.price * linea.cantidad)
   })
-
   return cartSinRepes
 }
+
   // Calculo del total del carrito
   function totalCarrito(cartSinRepes){
-  let totalCarrito= cartSinRepes.reduce((suma,linea)=> suma += linea.total,0).toFixed(3)
+  let totalCarrito= cartSinRepes.reduce((suma,linea)=> suma += linea.total,0)//.toFixed(3)
   return totalCarrito
-  
- 
 }
 
+//const totalCarrito =  cartSinRepes.reduce((suma,linea)=> suma += linea.total,0).toFixed(2)
 
 
 
