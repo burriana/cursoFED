@@ -4,54 +4,55 @@ function buy(id) {
   cart.push(products.find((ele) => ele.id === id));
 }
 
-
 //PROTOTYPE:  cartSinRepeticion(cart)
 //DESCRIPTION: A partir de un array con los productos de compra, crea otro array donde solo aparece una vez cada producto con la cantidad comprada. Calcula el total por procusto y el total del carrito.
 
-function cartSinRepeticion(cart){
+function cartSinRepeticion(cart) {
   const cartSinRepes = [];
-  const ids =[];
-  
-  cart.forEach(producto =>{
-    if(ids.includes(producto.id) === false){
-      ids.push(producto.id)
-      producto['cantidad'] = 1
-      cartSinRepes.push(producto)
-    }else{
-      producto.cantidad += 1
+  const ids = [];
+
+  cart.forEach((producto) => {
+    if (ids.includes(producto.id) === false) {
+      ids.push(producto.id);
+      producto["cantidad"] = 1;
+      cartSinRepes.push(producto);
+    } else {
+      producto.cantidad += 1;
     }
-  })
- // Calculo del precio total por producto
-  cartSinRepes.forEach(linea =>{
-    linea['total'] =( linea.price * linea.cantidad)
-  })
-  return cartSinRepes
+  });
+console.table(cartSinRepes);
+  // Calculo del precio total por producto
+  cartSinRepes.forEach((linea) => {
+    linea["total"] = linea.price * linea.cantidad;
+  });
+
+  const totalCarrito =  cartSinRepes.reduce((suma,linea)=> suma += linea.total,0).toFixed(3)
+  
+  return `El total de la compra es ${totalCarrito} €`;
 }
 
-  // Calculo del total del carrito
-  function totalCarrito(cartSinRepes){
-  let totalCarrito= cartSinRepes.reduce((suma,linea)=> suma += linea.total,0)//.toFixed(3)
-  return totalCarrito
+// Calculo del total del carrito
+function totalCarrito(cartSinRepes) {
+  let totalCarrito = cartSinRepes.reduce(
+    (suma, linea) => (suma += linea.total),
+    0
+  ); //.toFixed(3)
+  return totalCarrito;
 }
 
 //const totalCarrito =  cartSinRepes.reduce((suma,linea)=> suma += linea.total,0).toFixed(2)
-
-
-
-
 
 //PROTOTYPE: showArrayAsTable(array), array is an Array
 //DESCRIPTION: Show in the console de array as a table.
 function showArrayAsTable(array) {
   console.table(array);
-
 }
 
 //PROTOTYPE: cleanArray(array) array is an Array
 //DESCRIPTION: Clean de array. It will come to an empty array.
 function cleanArray(array) {
   array.length = 0;
- // subTotal()
+  // subTotal()
 }
 
 // PROTOTYPE: Void subTotal().
@@ -90,22 +91,19 @@ function computeTotal(array) {
   console.log(`--- Total de la compra por Producto: ${total.toFixed(3)}€ ---`);
 }
 
-
-
 function crearObject(array) {
-
   const model = {
     value: 0,
-    discount:0
-  }
-const subtotal = {}
-const categorias = []
-  
+    discount: 0,
+  };
+  const subtotal = {};
+  const categorias = [];
+
   array.forEach((ele) => {
     if (categorias.includes(ele.type) === false) {
       categorias.push(ele.type);
     }
-    categorias.map( cat => subtotal[cat]= model)
-})
-console.log(subtotal)
+    categorias.map((cat) => (subtotal[cat] = model));
+  });
+  console.log(subtotal);
 }
