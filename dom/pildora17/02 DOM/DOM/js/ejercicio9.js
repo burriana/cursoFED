@@ -1,5 +1,5 @@
 /*
-Amb appendChildChild crearem una nova card, amb el següent contingut html:
+Amb appendChild crearem una nova card, amb el següent contingut html:
 <div class="card">
   <img src="img/hacer2.jpg">
     <div class="info">
@@ -14,6 +14,8 @@ const p1 = document.createElement('p')
 p1.textContent = 'CONCIERTO'
 p1.classList.add('categoria')
 p1.classList.add('concierto')
+//p1.setAttribute('id','hola')
+//p1.setAttribute('class','hola categoria concierto')
 
 const p2 =  document.createElement('p')
 p2.textContent = 'Concierto de Rock'
@@ -25,9 +27,9 @@ p3.classList.add('precio')
 
 const info = document.createElement('div')
 info.classList.add('info')
-info.appendChild(p1)
-info.appendChild(p2)
-info.appendChild(p3)
+info.append(p1)
+info.append(p2)
+info.append(p3)
 
 const imagen = document.createElement('img')
 imagen.src = 'img/hacer2.jpg'
@@ -35,8 +37,8 @@ imagen.src = 'img/hacer2.jpg'
 const card = document.createElement('div')
 card.classList.add('card')
 
-card.appendChild(imagen)
-card.appendChild(info)
+card.append(imagen)
+card.append(info)
 
 const contenedor = document.querySelector('.hacer .contenedor-cards')
-contenedor.appendChild(card)
+contenedor.append(card)
