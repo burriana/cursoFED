@@ -14,7 +14,7 @@ console.log(infoPremium);
 segunda = document.querySelectorAll('.hospedaje')[1]
 console.log(segunda);
 
-formulario = document.querySelector('form#formulario')
+formulario1 = document.querySelector('form#formulario')
 console.log(formulario);
 
 menu = document.querySelector('nav')
