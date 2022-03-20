@@ -8,6 +8,6 @@ child.href ='#'
 navegacion.appendChild(child)
 
 busqueda = document.querySelector('.busqueda')
-console.log(busqueda);
+//console.log(busqueda);
 busqueda.placeholder = 'Burriana, Paris y Londres'
 

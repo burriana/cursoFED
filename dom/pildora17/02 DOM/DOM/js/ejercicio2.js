@@ -7,10 +7,10 @@
 
 //const classHeader = document.querySelector('.header').textContent
 const classHeader = document.getElementsByClassName('header')
-console.log(classHeader);
+//console.log(classHeader);
 
 const hero = document.getElementsByClassName('contenido-hero')
-console.log(hero);
+//console.log(hero);
 
 const cont = document.getElementsByClassName('contenedor')
-console.log(cont);
+//console.log(cont);

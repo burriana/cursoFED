@@ -4,7 +4,7 @@
 */
 
 const cards = document.querySelectorAll('.card')
-console.log(cards);
+//console.log(cards);
 
 const formu = document.querySelectorAll('#formulario')
-console.log(formu);
+//console.log(formu);

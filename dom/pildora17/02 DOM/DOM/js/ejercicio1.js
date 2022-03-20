@@ -12,7 +12,7 @@
 // console.log(formulario);
 const links = document.links
 const linksClass = document.links[4].className
-console.log(links)
-console.log(linksClass)
+//console.log(links)
+//console.log(linksClass)
 // const imagenes = document.images
 // console.log(imagenes)

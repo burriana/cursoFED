@@ -57,7 +57,6 @@
 
 ]
 const cart=[];
-const ids = [];
 
 // Array de la llista de la compra
 var cartList = [];

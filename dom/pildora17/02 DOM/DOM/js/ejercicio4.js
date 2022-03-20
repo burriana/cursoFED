@@ -6,16 +6,16 @@
 • El primer menú de navegació <nav>*/
 
 firstCard = document.getElementsByClassName('card')[0]
-console.log(firstCard);
+//console.log(firstCard);
 
 infoPremium = document.querySelector('.premium > .info')
-console.log(infoPremium);
+//console.log(infoPremium);
 
 segunda = document.querySelectorAll('.hospedaje')[1]
-console.log(segunda);
+//console.log(segunda);
 
 formulario1 = document.querySelector('form#formulario')
-console.log(formulario);
+//console.log(formulario);
 
 menu = document.querySelector('nav')
-console.log(menu);
+//console.log(menu);
