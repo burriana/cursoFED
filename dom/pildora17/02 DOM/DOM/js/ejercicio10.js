@@ -1,7 +1,5 @@
+   // Exercici 1: Escriu un hola mundo al carregar la plana
 
-function load() {
-  
-     //console.log("Hola Mundo");
-   }
-   window.onload = load;
- 
+document.addEventListener('DOMContentLoaded', () => {
+  //alert("Hola mundo")
+}) 

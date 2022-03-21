@@ -6,30 +6,29 @@ buscador
 c) El mateix que l'exercici 2, però ara fes servir una funció.
 */
 
-const inputTarget = document.querySelector('.busqueda')
+const $inputTarget = document.querySelector('.busqueda')
 
-inputTarget.addEventListener('keydown',event =>{
-  const keyName = event.key;
-  if (keyName!== 'a'){
-    //alert(`Has teccleado la: ${keyName}`);
-    inputTarget.textContent += keyName
+$inputTarget.addEventListener('keydown',e =>{
+  const $keyName = e.key;
+  if ($keyName !== 'a'){
+    alert(`Has tecleado la: ${$keyName}`);
   }
-  if (keyName === 'a'){
-    alert('Has tecleado a la letra: a');
-    inputTarget.textContent +=keyName
+  if ($keyName  === 'a'){
+    alert('Has tecleado la letra: a');
   }
 });
-console.log(inputTarget.textContent);
 
-// Fes que al clickar buscar, no envii el formulari
+//Fes que al clickar buscar, no envii el formulari
 
-// const btnSubmit = document.getElementById(btn-submit);
-// btnSubmit = addEventListener('click',function(e){
-//   if (inputTarget === ''){
-//     e.preventDefault();
-//   }
- 
+let $btnSubmit = document.getElementById('btn-submit');
+// $btnSubmit = addEventListener('click',(e)=>{
+//     e.preventDefault(); 
 // })
 
+let $formSubmit = document.querySelector('#formulario-buscar');
+
+$formSubmit =  addEventListener('click',(e)=>{
+  e.preventDefault(); 
+})
 
   
