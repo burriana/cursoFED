@@ -9,7 +9,7 @@ function removeFromCart(id) {
 document.querySelectorAll(".cardProduct").forEach(function (element) {
   element.addEventListener("click", function (e) {
     var dataID = element.getAttribute("data-id");
-    alert(dataID);
+    //alert(dataID);
     if (e.target.classList.contains("cardAdd")) {
       addToCart(dataID);
     }
@@ -29,6 +29,9 @@ function renderCarts() {
     templateCard
       .querySelector(".cardProduct")
       .setAttribute("id", "card" + item.id);
+      templateCard
+      .querySelector(".cardProduct")
+      .setAttribute("data-id",item.id);
     templateCard.querySelector("ul .cardAdd").setAttribute("data-id", item.id);
     templateCard
       .querySelector("ul .cardRemove")
@@ -43,6 +46,8 @@ function renderCarts() {
   });
   cards.appendChild(fragment);
 }
-document.addEventListener("DOMContentLoad", () => {
-  renderCarts();
-});
+
+document.addEventListener('DOMContentLoaded', () => {
+  //alert("Hola mundo")
+  renderCarts()
+}) 
