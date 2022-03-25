@@ -1,28 +1,38 @@
-function addToCart(id) {
-  alert("add to cart");
-}
-
-function removeFromCart(id) {
-  alert("remove to cart");
-}
-
-document.querySelectorAll(".cardProduct").forEach(function (element) {
-  element.addEventListener("click", function (e) {
-    var dataID = element.getAttribute("data-id");
-    //alert(dataID);
-    if (e.target.classList.contains("cardAdd")) {
-      addToCart(dataID);
-    }
-    if (e.target.classList.contains("cardRemove")) {
-      removeFromCart(dataID);
-    }
-  });
-});
-
-
 const cards = document.getElementById("cards");
 const templateCard = document.getElementById("template-card").content;
 const fragment = document.createDocumentFragment();
+
+document.addEventListener('DOMContentLoaded', () => {
+  //alert("Hola mundo")
+  renderCarts()
+  listenerEvents()
+
+}) 
+function addToCart(id) {
+  alert("add to cart " + id);
+}
+
+function removeFromCart(id) {
+  alert("remove from cart " + id);
+}
+
+function listenerEvents(){
+  document.querySelectorAll(".cardProduct").forEach(function (element) {
+    element.addEventListener("click", function (e) {
+      var dataID = element.getAttribute("data-id");
+      //alert(dataID);
+      if (e.target.classList.contains("cardAdd") || e.target.classList.contains("fa-cart-plus")) {
+        addToCart(dataID);
+        e.stopPropagation();
+      }
+      if (e.target.classList.contains("cardRemove") || e.target.classList.contains("fa-trash-alt") ) {
+        removeFromCart(dataID);
+        e.stopPropagation();
+      }
+    });
+  });
+
+};
 
 function renderCarts() {
   products.forEach((item) => {
@@ -47,7 +57,4 @@ function renderCarts() {
   cards.appendChild(fragment);
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  //alert("Hola mundo")
-  renderCarts()
-}) 
+
