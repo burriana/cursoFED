@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue 1</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.js"></script>
+  </head>
+  <body>
+    <div>
+      <div id="app"></div>
+    </div>
+
+    <template id="ejemplo">
+      <div>
+        <div>
+          <b>{{ mensaje }}</b>
+        </div>
+        <div>
+          <a v-bind:href="url"> 
+            <img v-bind:src="imagen" />
+          </a>
+        </div>
+        <span>{{mensaje.split(' ').reverse().join(' ')}}</span><br>
+        <span>{{ number + 1}}</span><br>
+        <span>{{ok ? 'Yes': 'No'}}</span>
+      </div>
+    </template>
+
+    <script>
+      const app = new Vue({
+        el: "#app",
+        template: "#ejemplo",
+        data: {
+          mensaje: "Hola Mundo",
+          imagen: "img/vue.jpg",
+          url:'https://vuejs.org/',
+          number: 10,
+          ok: true
+
+        },
+        methods:{
+          reset: function(){
+            
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
