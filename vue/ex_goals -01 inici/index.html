@@ -6,15 +6,26 @@
     <title>A First App</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.js"></script>
+
   </head>
   <body>
     <div id="app">
       <div>
-        <label for="goal">Goal</label>
-        <input type="text" id="goal" v-model ="enteredValue "/>
-        <button v-on:click = 'addGoal'>Add Goal</button>
-      </div>
+        <label for="goal">Task to do ...</label>
+        <input
+          type="text"
+          id="goal"
+          v-model="enteredValue "
+          v-on:keypress="enter"
+        />
 
+        <button @click="addGoal">Add Goal</button>
+        <button @click="delGoals">Clean</button>
+        <!-- <p v-for="item in goal" @click="goalDone">{{item}}</p> -->
+        <ol>
+          <li v-for="(item,key,index) in goal" @click="goalDone" @dblclick="deshacer">{{item}}</li>
+        </ol>
+      </div>
     </div>
     <script src="app.js"></script>
   </body>

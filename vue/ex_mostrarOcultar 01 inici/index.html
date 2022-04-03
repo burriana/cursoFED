@@ -4,15 +4,15 @@
     <meta charset="utf-8" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.js"></script>
     <title>1e component VUE</title>
-   <style>
-     button{
-       padding:10px;
-       margin:10px;
-     }
-     body{
-       text-align: center;
-     }
-   </style>
+    <style>
+      button {
+        padding: 10px;
+        margin: 10px;
+      }
+      body {
+        text-align: center;
+      }
+    </style>
   </head>
 
   <body>
@@ -20,18 +20,14 @@
 
     <template id="ejemplo">
       <div>
-        <button @click="toggleMostrar">Mostrar/Ocultar</button><br>
+        <button @click="toggleMostrar">Mostrar/Ocultar</button><br />
         <div v-if="mostrar">
-          <img :src="imagen" />
+          <img :src="imagen" /><br /><br />
           <b>{{ mensaje }}</b>
         </div>
-        <ul>
-          <li v-for="item in cursos">
-            {{item.name}}
-          </li>
-        </ul>
-
-       
+        <p v-for="item in cursos">
+          <a v-bind:href="item.url">{{item.name}}</a>
+        </p>
       </div>
     </template>
 
