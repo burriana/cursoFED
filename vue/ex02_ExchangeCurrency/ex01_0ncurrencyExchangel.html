@@ -21,17 +21,24 @@
          <h1>Currency Converter</h1>         
          <span>Enter Amount:</span>
          <input type = "number"  v-model="cantidad" placeholder = "Enter Amount" /><br/><br/>
-         <span>Convert From:</span>
-         <select style="width:300px;font-size:25px;" v-model="currentfrom">
-            <option v-for = "moneda in currencyfrom" :value="moneda.name" >{{moneda.desc}}</option>
-         </select>
-         <span>Convert To:</span>
-         <select  style = "width:300px;font-size:25px;" v-model="currentto">
-            <option  v-for = "moneda in currencyfrom" :value="moneda.name" >{{moneda.desc}}</option>
-         </select><br/><br/>
-         {{currentfrom}}
-         {{currentto}}
-         {{cantidad}}
+         <div>
+            <span>Convert From:</span>
+            <select style="width:300px;font-size:25px;" v-model="currentfrom">
+               <option v-for = "moneda in currencyfrom" :value="moneda.name" >{{moneda.desc}}</option>
+            </select>
+         </div>
+         <br>
+         <div>
+            <span>Convert To:</span>
+            <select  style = "width:300px;font-size:25px;" v-model="currentto">
+               <option  v-for = "moneda in currencyfrom" :value="moneda.name" >{{moneda.desc}}</option>
+            </select><br/><br/>
+         </div>
+        
+         <div>
+           The value of   {{cantidad}} {{currentfrom}} is {{this.cambio}} {{currentto}}
+         </div>
+        
       </div>
    
       <script src="moneda.js"></script>
