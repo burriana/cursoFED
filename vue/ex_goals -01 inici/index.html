@@ -11,7 +11,7 @@
   <body>
     <div id="app">
       <div>
-        <label for="goal">Task to do ...</label>
+        <label for="goal">Tasks to do ...</label>
         <input
           type="text"
           id="goal"
@@ -19,11 +19,12 @@
           v-on:keypress="enter"
         />
 
-        <button @click="addGoal">Add Goal</button>
-        <button @click="delGoals">Clean</button>
+        <button @click="addGoal">Add Task</button>
+        <button @click="delGoals">Clean All</button>
         <!-- <p v-for="item in goal" @click="goalDone">{{item}}</p> -->
         <ol>
           <li v-for="(item,key,index) in goal" @click="goalDone" @dblclick="deshacer">{{item}}</li>
+          
         </ol>
       </div>
     </div>
