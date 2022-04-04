@@ -23,7 +23,7 @@
         <button @click="delGoals">Clean All</button>
         <!-- <p v-for="item in goal" @click="goalDone">{{item}}</p> -->
         <ol>
-          <li v-for="(item,key,index) in goal" @click="goalDone" @dblclick="deshacer">{{item}}</li>
+          <li v-for="(item,key,index) in goal" @click="goalDone" @dblclick="delTask">{{item}}</li>
           
         </ol>
       </div>

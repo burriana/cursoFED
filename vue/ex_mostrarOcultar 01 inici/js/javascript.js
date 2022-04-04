@@ -15,6 +15,10 @@ const app = new Vue({
         name: "Curso de VUE",
         url: "https://styde.net/curso-de-vue-2/",
       },
+      {
+        name: "Curso de VUE",
+        url: "https://styde.net/curso-de-vue-2/",
+      },
     ],
     mostrar: true,
     mensaje: "Benvingut a VUE",

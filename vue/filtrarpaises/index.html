@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paises</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h3> Listado de Paises</h3>
+      <ul>
+        <li v-for="country in countries">{{country}}</li>
+      </ul>
+      <br><hr><br>
+      <label> Filtro:</label>
+      <input type="text" v-model="country" />
+      <ul>
+        <li v-for="country in countriesFiltered">{{country}}</li>
+      </ul>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
