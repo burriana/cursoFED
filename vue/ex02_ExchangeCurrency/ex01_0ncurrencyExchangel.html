@@ -23,20 +23,20 @@
          <input type = "number"  v-model="cantidad" placeholder = "Enter Amount" /><br/><br/>
          <div>
             <span>Convert From:</span>
-            <select style="width:300px;font-size:25px;" v-model="currentfrom">
-               <option v-for = "moneda in currencyfrom" :value="moneda.name" >{{moneda.desc}}</option>
+            <select style="width:300px;font-size:25px;" v-model="currentfrom" >
+               <option v-for = "moneda in currencyfrom" :value="moneda" >{{moneda.desc}}</option>
             </select>
          </div>
          <br>
          <div>
             <span>Convert To:</span>
             <select  style = "width:300px;font-size:25px;" v-model="currentto">
-               <option  v-for = "moneda in currencyfrom" :value="moneda.name" >{{moneda.desc}}</option>
+               <option  v-for = "moneda in currencyfrom" :value="moneda" >{{moneda.desc}}</option>
             </select><br/><br/>
          </div>
         
          <div>
-           The value of   {{cantidad}} {{currentfrom}} is {{this.cambio}} {{currentto}}
+          <p>The value of   {{cantidad}} {{currentfrom.name}} is {{this.change}} {{currentto.name}}</p> 
          </div>
         
       </div>

@@ -3,14 +3,16 @@ var app = new Vue({
   data: {
     name: "Olegario",
     currencyfrom: [
-      { name: "USD", desc: "US Dollar" },
-      { name: "EUR", desc: "Euro" },
-      { name: "INR", desc: "Indian Rupee" },
-      { name: "BHD", desc: "Bahraini Dinar" },
+      { name: "USD", desc: "US Dollar" ,ratio:1},
+      { name: "EUR", desc: "Euro",ratio:0.84 },
+      { name: "INR", desc: "Indian Rupee",ratio:63.88 },
+      { name: "BHD", desc: "Bahraini Dinar",ratio:0.38 },
     ],
-    currentfrom: "INR",
+    currentfrom: {},
     currentto: "USD",
     cantidad: 0,
+    fromratio:1,
+    toratio:1,
   },
   computed: {
     cambio: function () {
@@ -65,10 +67,14 @@ var app = new Vue({
       if (this.currentfrom == "BHD" && this.currentto == "BHD") {
         return this.cantidad * 1;
       };
-
-      
-
-
     },
-  },
+    change: function(){
+      
+      if(NaN){
+        return 0
+      }else{
+        return this.cantidad * this.currentto.ratio /  this.currentfrom.ratio
+      }
+      
+  }}
 });
