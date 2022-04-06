@@ -8,9 +8,9 @@ var app = new Vue({
       { name: "INR", desc: "Indian Rupee",ratio:63.88 },
       { name: "BHD", desc: "Bahraini Dinar",ratio:0.38 },
     ],
-    currentfrom: {},
-    currentto: "USD",
-    cantidad: 0,
+    currentfrom: { name: "INR", desc: "Indian Rupee",ratio:63.88 },
+    currentto: { name: "USD", desc: "US Dollar" ,ratio:1},
+    cantidad: 1,
     fromratio:1,
     toratio:1,
   },
@@ -73,8 +73,8 @@ var app = new Vue({
       if(NaN){
         return 0
       }else{
-        return this.cantidad * this.currentto.ratio /  this.currentfrom.ratio
+        let valor = this.cantidad * this.currentto.ratio /  this.currentfrom.ratio
+        return valor.toFixed(3)
       }
-      
   }}
 });
