@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KM M</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <label for="">Km</label>
+      <input type="text" v-model="km" />
+      <label >Metros</label>
+      <input type="text" v-model="m" />
+
+      <hr />
+      <br />
+      <label >ºC</label>
+      <input type="text" v-model="celcius" />
+      <label >ºF</label>
+      <input type="text" v-model="fahrenheit" />
+    </div>
+    <script>
+      const vm = new Vue({
+        el: "#app",
+        data: {
+          km: 1,
+          m: 1000,
+          celcius: 0,
+          fahrenheit: 32,
+        },
+        watch: {
+          km: function (valor) {
+            // this.km = valor;
+            this.m = valor * 1000;
+          },
+          m: function (valor) {
+            this.km = valor / 1000;
+            // this.m = valor;
+          },
+          celcius: function (temp) {
+            // this.celcius = temp;
+            this.fahrenheit = Math.round(temp * 1.8 + 32);
+            // this.fahrenheit = (temp * 1.8 + 32).toFixed(0);
+          },
+          fahrenheit: function (temp2) {
+            this.celcius = Math.round((temp2 - 32) / 1.8 );
+            // this.celcius = ((temp2 - 32) / 1.8 ).toFixed(0);
+            // this.fahrenheit = temp;
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

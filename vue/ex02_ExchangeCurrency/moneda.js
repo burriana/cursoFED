@@ -1,7 +1,7 @@
 var app = new Vue({
   el: "#databinding",
   data: {
-    name: "Olegario",
+    name: "olegario",
     currencyfrom: [
       { name: "USD", desc: "US Dollar", ratio: 1 },
       { name: "EUR", desc: "Euro", ratio: 0.84 },
@@ -11,10 +11,10 @@ var app = new Vue({
     currentfrom: { name: "INR", desc: "Indian Rupee", ratio: 63.88 },
     currentto: { name: "USD", desc: "US Dollar", ratio: 1 },
     cantidad: 1,
-    fromratio: 1,
-    toratio: 1,
+   
   },
   computed: {
+
     cambio: function () {
       if (this.currentfrom == "INR" && this.currentto == "INR") {
         return this.cantidad * 1;
@@ -86,5 +86,8 @@ var app = new Vue({
       }
     },
   },
+
+  
+
   
 });

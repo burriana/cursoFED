@@ -14,10 +14,21 @@
          span, option, input {
             font-size:25px;
          }
+         .solucion{
+            font-size:1.5rem;
+            font-family:arial;
+            font-weight:bold;
+            color:green
+         }
+         .ratio{
+            font-size:1.1rem;
+            font-family:arial;
+            font-weight:bold;
+         }
       </style>
       
       <div id = "databinding" >
-         <h1>Hola, {{name}}</h1> 
+         <h1>Hola, {{name | capitalize}}</h1> 
          <h1>Currency Converter</h1>         
          <span>Enter Amount:</span>
          <input type = "number"  v-model="cantidad" placeholder = "Enter Amount" /><br/><br/>
@@ -36,8 +47,8 @@
          </div>
         
          <div>
-          <p>The ratio from {{currentfrom.name}}  to {{currentto.name}} is {{this.ratio}}.</p> 
-          <p>The value of   {{cantidad}} {{currentfrom.name}} is {{this.change}} {{currentto.name}}</p> 
+          <p class="ratio">The currency change from {{currentfrom.name}}  to {{currentto.name}} is {{this.ratio}}.</p> 
+          <p class="solucion">The value of   {{cantidad}} {{currentfrom.name}} is {{this.change}} {{currentto.name}}</p> 
          </div>
         
       </div>
