@@ -11,15 +11,17 @@
     <div id="app">
       <label for="">Km</label>
       <input type="text" v-model="km" />
-      <label >Metros</label>
+      <label>Metros</label>
       <input type="text" v-model="m" />
 
       <hr />
-      <br />
-      <label >ºC</label>
+     
+      <label>ºC</label>
       <input type="text" v-model="celcius" />
-      <label >ºF</label>
+      <label>ºF</label>
       <input type="text" v-model="fahrenheit" />
+      <label>ºK</label>
+      <input type="text" v-model="kelvin" />
     </div>
     <script>
       const vm = new Vue({
@@ -27,8 +29,10 @@
         data: {
           km: 1,
           m: 1000,
+          // Datos para convertir temperatura
           celcius: 0,
           fahrenheit: 32,
+          kelvin:273.15,
         },
         watch: {
           km: function (valor) {
@@ -41,14 +45,18 @@
           },
           celcius: function (temp) {
             // this.celcius = temp;
-            this.fahrenheit = Math.round(temp * 1.8 + 32);
+            this.fahrenheit = Math.round((temp * 9) / 5 + 32);
+            this.kelvin = temp + 273.15
             // this.fahrenheit = (temp * 1.8 + 32).toFixed(0);
           },
           fahrenheit: function (temp2) {
-            this.celcius = Math.round((temp2 - 32) / 1.8 );
+            this.celcius = Math.round(((temp2 - 32) * 5) / 9);
             // this.celcius = ((temp2 - 32) / 1.8 ).toFixed(0);
             // this.fahrenheit = temp;
           },
+          kelvin:function(temp){
+            this.celcius = Math.round(temp - 273.15)
+          }
         },
       });
     </script>

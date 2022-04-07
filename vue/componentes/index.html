@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Componente</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<body>
+  <div id="my-app">
+    <h1>{{ name }}</h1>
+    <h2>El primer botó esta a dins del objecte VUE </h2>
+    <!-- Cridem directamente al Objecte de VUE -->
+    <button @click="onAdd">{{ count }} boto objecte VUE</button>
+    <h2>El segon botó està fet amb un component </h2>
+    <!-- Cridem a un component de VUE -->
+    <my-button></my-button>
+    <my-button></my-button>
+    <my-button></my-button>
+    <my-button></my-button>
+
+    <user-detail :first="firstname" :last="lastname"></user-detail>
+    </div>
+  
+ 
+  <script src="user-detail.js"></script>
+  <script src="component.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
