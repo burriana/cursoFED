@@ -27,8 +27,8 @@ const courseContent = {
                 <h3>{{ title }}</h3>
                 <h4>{{ subtitle }}</h4>
                 <p> {{ description }} </p>
-                <span> <strong> {{ price}} € </strong> </span>
-                <span> {{ discount}}</span>
+                <span> <strong>{{ price}} € </strong> </span>
+                <span> {{ discount}} </span>
             </section>
         </main>
     `
@@ -58,8 +58,8 @@ const course = {
         title: { type: String, required: true },
         subtitle: { type: String, required: true },
         description: { type: String, required: true },
-        price: { type: Number, required: true },
-        discount: { type: String, required: true }
+         price: { type: Number, required: true },
+         discount: { type: String, required: true }
     },
     components: {
         'course-header': courseHeader,

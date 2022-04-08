@@ -45,12 +45,12 @@ const app = new Vue({
       {
         id: 5,
         title: "Curso Introductorio de Vue",
-        subtitle: "Aprendiendo Vue en 20 inutos",
+        subtitle: "Aprendiendo Vue en 20 minutos",
         description:
           "En este curso explicaremos de la mano de los mejores profesores de Vue los principios básicos",
         type: "course-vue",
         price: 150,
-        discount:'- 20% discount'
+        discount:'20 % discount',
       },
     ],
     cart: [],
