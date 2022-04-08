@@ -74,7 +74,7 @@ body {
 
 .course.course-js .course-header,
 .course.course-js .course-footer button {
-    background: #43A047;
+    background: #3EB9CC;
     color: #FFFFFF;
 }
 
@@ -85,5 +85,5 @@ body {
 
 .course.course-vue .course-header,
 .course.course-vue .course-footer button {
-    background:red;
+    background:#42D392;
 }
