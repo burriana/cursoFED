@@ -18,7 +18,7 @@ const courseContent = {
         subtitle: { type: String, required: true },
         description: { type: String, required: true },
         price: { type: Number, required: true },
-        descount: { type: String, required: true },
+        discount: { type: String, required: true }
     },
     template: `
         <main class="course-content">
@@ -27,8 +27,8 @@ const courseContent = {
                 <h3>{{ title }}</h3>
                 <h4>{{ subtitle }}</h4>
                 <p> {{ description }} </p>
-                <span> {{ price}} € </span>
-                <span> {{ descount}} </span>
+                <span> <strong> {{ price}} € </strong> </span>
+                <span> {{ discount}}</span>
             </section>
         </main>
     `
@@ -58,8 +58,8 @@ const course = {
         title: { type: String, required: true },
         subtitle: { type: String, required: true },
         description: { type: String, required: true },
-         price: { type: Number, required: true },
-         descount: { type: String, required: true }
+        price: { type: Number, required: true },
+        discount: { type: String, required: true }
     },
     components: {
         'course-header': courseHeader,
@@ -79,7 +79,7 @@ const course = {
     template: `
         <div :class="['course', styleClass]">
             <course-header :title="header.title" :image="header.image"></course-header>
-            <course-content :title="title" :subtitle="subtitle" :description="description" :price='price' :descount='descount' > </course-content>
+            <course-content :title="title" :subtitle="subtitle" :description="description" :price='price' :discount='discount' > </course-content>
             <course-footer :months="months" @add="add"></course-footer>
         </div>
     `,
