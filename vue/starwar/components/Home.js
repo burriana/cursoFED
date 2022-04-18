@@ -40,8 +40,8 @@ Vue.component("Home", {
         
         
       ],
-      sentence:1,
-      // frasesNum:null
+      sentence:0,
+      frasesNum:null
 
      
     };
@@ -50,7 +50,7 @@ Vue.component("Home", {
     this.frasesNum = this.frases.length;
   },
   methods: {
-    
+   
   },
   
   props: [],

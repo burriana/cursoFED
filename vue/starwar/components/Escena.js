@@ -6,7 +6,7 @@ Vue.component("Escena", {
     :key='i'
     :class='{active: i ==selectPhrase}'
     >
-    {{frase.name}}
+     {{frase.name}}
     <li/>
   </ul>
    
@@ -15,11 +15,24 @@ Vue.component("Escena", {
   data() {
     return {};
   },
-  methods: {},
+  methods: {
+
+  },
   props: ['frasesProp','selectPhrase'],
+
   beforeMount(){
-    console.log(this.selectPhrase)
     let screen = document.querySelector('body');
-    screen.style.background = "url('./img/" + (parseInt(this.selectPhrase) + 1) + ".jpg ')"
-  }
+    screen.style.background = "url('img/" + (this.selectPhrase + 1 )  + ".jpg ') "
+    screen.style.backgroundSize = 'cover'
+
+  },
+ 
+  beforeUpdate(){
+    // console.log(this.selectPhrase)
+    let screen = document.querySelector('body');
+    screen.style.backgroundImage = "url( 'img/" + (this.selectPhrase + 1 ) + ".jpg ') "
+    screen.style.backgroundSize = "cover"
+    // screen.style.backgroundRepeat = "nopeat"
+    screen.style.backgroundHeight = "100%"
+   }
 });
