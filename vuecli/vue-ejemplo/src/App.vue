@@ -1,17 +1,21 @@
 <template>
-  <!-- <img alt="Vue logo" src="http://picsum.photos/500">
-  <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-  <CardUser></CardUser>
+  <!-- <img alt="Vue logo" src="http://picsum.photos/500"> 
+  <img alt="Vue logo" src="./assets/logo.png">  -->
+  <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
+  <HeaderTop/>
+  <!-- <CardUser></CardUser> -->
 </template>
 
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
-import CardUser from './components/CardUser.vue'
+// import CardUser from './components/CardUser.vue'
+import HeaderTop from './components/HeaderTop.vue'
 
 export default {
   name: 'App',
   components: {
-     CardUser
+    //  CardUser,
+     HeaderTop
   }
 }
 </script>
@@ -26,6 +30,12 @@ export default {
   margin-top: 60px;
   display:flex;
   justify-content: center;
+   
 
+}
+body{
+margin:0;
+padding:0;
+	font-family: 'Work Sans', sans-serif;
 }
 </style>
