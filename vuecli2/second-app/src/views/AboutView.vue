@@ -1,28 +1,32 @@
 <template>
   <div>
     <div class="about">
-      <h1>This is an about page</h1>
-    </div>
-    <div class="about">
-      <h1>Aqui farem proves amb les APIsss</h1>
+      <h1 class="my-5">The Chuck Norris API</h1>
       <div>
         <b-card
-          title="Chiste del día"
-          img-src="https://picsum.photos/600/300/?image=25"
-          img-alt="Image"
+          title="Joke of the day"
+          
+          img-src="../assets/img/norris.jpg"
+          img-alt="Chuck Norris"
           img-top
           tag="article"
-          style="max-width: 20rem"
+          style="max-width: 20rem;
+          background-color:transparent;
+          border:none;
+          font-size:1.2rem;
+          color:white;
+          font-weight:bold;
+          "
           class="mb-2"
+          
         >
           <b-card-text>
             {{ acudit }}
           </b-card-text>
 
-          <b-button href="#" variant="primary">Go somewhere</b-button>
+          <b-button href="#" variant="dark" @click="newJoke()">New Joke</b-button>
         </b-card>
-      </div>
-      
+      </div>  
     </div>
   </div>
 </template>
@@ -38,6 +42,14 @@ export default {
       acudit: "",
     };
   },
+  methods:{
+    newJoke(){
+      axios
+      .get("https://api.chucknorris.io/jokes/random")
+      .then((response) => (this.acudit = response.data.value));
+    }
+  },
+  
   mounted() {
     console.log("entra");
     axios
@@ -46,4 +58,15 @@ export default {
   },
 };
 </script>
+<style scoped>
+.about{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  background-image: url('../assets/img/poblado.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>
 
