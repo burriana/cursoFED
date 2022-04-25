@@ -1,6 +1,6 @@
 <template>
   <div class="havefun">
-    <h1>Chuk Norrris API Jokes</h1>
+    <h1 class="my-3" >Chuk Norrris API Jokes</h1>
     <div class="card" style="width: 18rem">
       <img src="https://picsum.photos/600" class="card-img-top" alt="..." />
       <div class="card-body">
