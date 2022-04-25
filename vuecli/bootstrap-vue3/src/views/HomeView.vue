@@ -27,7 +27,7 @@ export default {
 .todo{
 height:100vh;
 /* background-image: url('../assets/img/montserrat__1.jpg'); */
-background-image: url('https://picsum.photos/1280/720');
+background-image: url('../assets/img/montserrat__1.jpg');
 background-repeat: no-repeat;
 background-size: cover;
 display:flex;

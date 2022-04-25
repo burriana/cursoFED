@@ -35,5 +35,8 @@ export default {
 </script>
 
 <style>
-
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Open+Sans&family=Roboto:wght@500&family=Sofia&display=swap');
+.navbar-brand{
+  font-family:Roboto,sans,sans-serif
+}
 </style>

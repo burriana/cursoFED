@@ -1,6 +1,6 @@
 <template>
   <div class="havefun">
-    <h1>Chuk Norrris API jokes</h1>
+    <h1>Chuk Norrris API Jokes</h1>
     <div class="card" style="width: 18rem">
       <img src="https://picsum.photos/600" class="card-img-top" alt="..." />
       <div class="card-body">
@@ -43,11 +43,15 @@ export default {
 </script>
 
 <style scoped>
+
 .havefun{
   display:flex;
   flex-direction:column;
   align-items:center;
   justify-content:center;
+}
+h1{
+  font-family:Roboto,sans-serif;
 }
 </style>
 
