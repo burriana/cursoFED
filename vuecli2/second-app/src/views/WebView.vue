@@ -10,7 +10,7 @@
   </div>
 </template>
 
-// <script>
+ <script>
 // // @ is an alias to /src
 
 // export default {

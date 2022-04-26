@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <NavBar></NavBar>
+    <FooterBar></FooterBar> 
     
   </div>
 </template>
@@ -8,11 +9,13 @@
 <script>
 // @ is an alias to /src
 import NavBar from '@/components/NavBar.vue'
+import FooterBar from '@/components/FooterBar.vue'
 
 export default {
   name: 'HomeView',
   components: {
-    NavBar
+    NavBar,
+    FooterBar
   }
 }
 </script>
@@ -32,7 +35,7 @@ nav {
 
 nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color: #ddd;
   text-decoration:none;
 }
 

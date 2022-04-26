@@ -15,7 +15,8 @@
         <b-collapse id="nav-collapse" is-nav>
           <b-navbar-nav >
             <router-link class="px-4" to="/">Home</router-link>
-            <router-link class="px-4" to="/about">About</router-link>
+            <router-link class="px-4" to="/about">Daily Joke</router-link>
+            <router-link class="px-4" to="/jokes">Jokes</router-link>
             <router-link class="px-4" to="/web"> Web</router-link>
           </b-navbar-nav>
 

@@ -1,32 +1,13 @@
 <template>
   <div>
-    <div class="about">
-      <h1 class="my-5">The Chuck Norris API</h1>
-      <div>
-        <b-card
-          title="Joke of the day"
-          
-          img-src="../assets/img/norris.jpg"
-          img-alt="Chuck Norris"
-          img-top
-          tag="article"
-          style="max-width: 20rem;
-          background-color:transparent;
-          border:none;
-          font-size:1.2rem;
-          color:white;
-          font-weight:bold;
-          "
-          class="mb-2"
-          
-        >
-          <b-card-text>
-            {{ acudit }}
-          </b-card-text>
-
-          <b-button href="#" variant="dark" @click="newJoke()">New Joke</b-button>
-        </b-card>
-      </div>  
+    <div class="home">
+      <h1>The Chuck Norris API: Joke of the day</h1>
+      <div class="card-container">
+        <div class="card">
+          <p @click="newJoke()">{{ acudit }}</p>
+        </div>
+        <button @click="newJoke()">New Joke</button>
+      </div>
     </div>
   </div>
 </template>
@@ -42,16 +23,17 @@ export default {
       acudit: "",
     };
   },
-  methods:{
-    newJoke(){
+  methods: {
+    newJoke() {
       axios
-      .get("https://api.chucknorris.io/jokes/random")
-      .then((response) => (this.acudit = response.data.value));
-    }
+        .get("https://api.chucknorris.io/jokes/random")
+        .then((response) => (this.acudit = response.data.value));
+    },
   },
-  
+
   mounted() {
     console.log("entra");
+  
     axios
       .get("https://api.chucknorris.io/jokes/random")
       .then((response) => (this.acudit = response.data.value));
@@ -59,14 +41,43 @@ export default {
 };
 </script>
 <style scoped>
-.about{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  background-image: url('../assets/img/poblado.webp');
-  background-repeat: no-repeat;
-  background-size: cover;
+h1 {
+  padding-top: 1em;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
 }
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+
+  height: 60vh;
+  align-items: center;
+  justify-content: center;
+}
+.card {
+  width: 50%;
+  border: none;
+  align-items: middle;
+  padding-bottom: 1em;
+}
+p{
+  font-size:1.5rem;
+  background-color:#999;
+  color:white;
+  padding: .5em 1.5em;
+  border-radius: 10px;
+}
+
+button {
+  border: none;
+  padding: 0.5em 1.5em;
+  background-color: #999;
+  color: white;
+}
+button:hover, p:hover {
+  background-color: #333;
+}
+
 </style>
 
