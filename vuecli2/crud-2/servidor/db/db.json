@@ -1,0 +1,27 @@
+{
+  "tutorials": [
+    {
+      "id": 1,
+      "title": "Curso HTML",
+      "description": "Curso de HTML de 60 h de duracion",
+      "published": ""
+    },
+    {
+      "id": 2,
+      "title": "Curso CSS",
+      "description": "Curso de CSS de 120 h de duracion",
+      "published": ""
+    },
+    {
+      "id": 3,
+      "title": "Curso Javascript",
+      "description": "Curso de JavaScript de 180 h de duracion",
+      "published": true
+    },
+    {
+      "title": "Tutorial de Vue",
+      "description": "Curso introductorio de Vue",
+      "id": 4
+    }
+  ]
+}

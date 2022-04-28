@@ -19,23 +19,23 @@
         {{ currentTutorial.published ? "Published" : "Pending" }}
       </div>
     </form>
-    <button class="badge badge-primary mr-2"
+    <button class="btn btn-primary mx-1"
       v-if="currentTutorial.published"
       @click="updatePublished(false)"
     >
       UnPublish
     </button>
-    <button v-else class="badge badge-primary mr-2"
+    <button v-else class="btn btn-primary mx-1"
       @click="updatePublished(true)"
     >
       Publish
     </button>
-    <button class="badge badge-danger mr-2"
+    <button class="btn btn-danger  mx-1"
       @click="deleteTutorial"
     >
       Delete
     </button>
-    <button type="submit" class="badge badge-success"
+    <button type="submit" class="btn btn-success mx-1"
       @click="updateTutorial"
     >
       Update

@@ -41,11 +41,12 @@
         <div>
           <label><strong>Status:</strong></label> {{ currentTutorial.published ? "Published" : "Pending" }}
         </div>
-        <a class="badge badge-warning"
+        <button class="botoEdit" >
+        <a class=" btn btn-primary"
           :href="'/tutorials/' + currentTutorial.id"
         >
           Edit
-        </a>
+        </a></button>
       </div>
       <div v-else>
         <br />
@@ -118,5 +119,9 @@ export default {
   text-align: left;
   max-width: 750px;
   margin: auto;
+}
+.botoEdit{
+  border:none;
+  background-color:transparent;
 }
 </style>

@@ -1,145 +1,142 @@
 {
   "productos": [
     {
-      "id": 1
+      "id": 1,
+      "titulo": "Anillo turmalina rosa",
+      "descripcion": "Anillo de plata engarzado con turmalina rosa hidrotermal",
+      "precio": "45",
+      "type": "Anillos",
+      "url": "img/1_anillo-erizo-010.jpg",
+      "material": "Plata",
+      "size": 14
     },
     {
       "id": 2,
-      "name": "Anillo erizo plata",
-      "description": "Anillo de plata con forma de erizo",
-      "price": 25,
+      "titulo": "Anillo erizo plata",
+      "descripcion": "Anillo de plata con forma de erizo",
+      "precio": 25,
       "type": "Anillos",
-      "img": "assets/img/imgShop/anillo-erizo-010.jpg",
+      "url": "http://localhost:3000/img/2_anillo-erizo-010.jpg",
       "material": "Plata",
       "size": 14
     },
     {
       "id": 3,
-      "name": "Anillo ópalo Australia",
-      "description": "Anillo de plata engarzado con ópalo azul de Australia",
-      "price": 55,
+      "titulo": "Anillo ópalo Australia",
+      "descripcion": "Anillo de plata engarzado con ópalo azul de Australia",
+      "precio": 55,
       "type": "Anillos",
-      "img": "assets/img/imgShop/anillo-opalo-002.jpeg",
+      "url": "img/imgShop/3_anillo-opalo-002.jpeg",
       "material": "Plata y ópalo azul de Australia",
       "size": 18
     },
     {
       "id": 4,
-      "name": "Colgante hoja plata",
-      "description": "Colgante grande, con forma de hoja, realizado en plata",
-      "price": 60,
+      "titulo": "Colgante hoja plata",
+      "descripcion": "Colgante grande, con forma de hoja, realizado en plata",
+      "precio": 60,
       "type": "Colgantes",
-      "img": "assets/img/imgShop/colgante-hoja-002.jpg",
+      "url": "img/imgShop/4_colgante-hoja-002.jpg",
       "material": "Oro y Plata",
       "size": "XL"
     },
     {
       "id": 5,
-      "name": "Colgante nenúfar de plata",
-      "description": "Colgante de plata, grande realizado con técnica de goteo",
-      "price": 45,
+      "titulo": "Colgante nenúfar de plata",
+      "descripcion": "Colgante de plata, grande realizado con técnica de goteo",
+      "precio": 45,
       "type": "Colgantes",
       "material": "Plata",
       "size": "XL",
-      "img": "assets/img/imgShop/colgante-nenufar-009.jpeg"
+      "url": "img/imgShop/5_colgante-nenufar-009.jpeg"
     },
     {
       "id": 6,
-      "name": "Colgante plata Edelweis",
-      "description": "Colgante de plata, grande, con forma de Edelweis ",
-      "price": 60,
+      "titulo": "Colgante plata Edelweis",
+      "descripcion": "Colgante de plata, grande, con forma de Edelweis ",
+      "precio": 60,
       "type": "Colgantes",
       "material": "Plata",
       "size": "XL",
-      "img": "assets/img/imgShop/colgante-edelweis-011.jpg"
+      "url": "img/imgShop/6_colgante-edelweis-011.jpg"
     },
     {
       "id": 7,
-      "name": "Pendientes estrella plata",
-      "description": "Pendientes de plata con forma de estrella de mar",
-      "price": 30,
+      "titulo": "Pendientes estrella plata",
+      "descripcion": "Pendientes de plata con forma de estrella de mar",
+      "precio": 30,
       "type": "Pendientes",
       "material": "Plata",
       "size": "M",
-      "img": "assets/img/imgShop/pendientes-estrella2-015.jpg"
+      "url": "img/imgShop/7_pendientes-estrella2-015.jpg"
     },
     {
       "id": 8,
-      "name": "Pendientes perla y apatito",
-      "description": "Pendientes con perla y apatito facetado. Son desmontable y la perla se puede llevar sola, o bien con el apatito",
-      "price": 55,
+      "titulo": "Pendientes perla y apatito",
+      "descripcion": "Pendientes con perla y apatito facetado. Son desmontable y la perla se puede llevar sola, o bien con el apatito",
+      "precio": 55,
       "type": "Pendientes",
       "material": "Plata, perla cultivada, apatito facetado con cuarzo de roca",
       "size": "M",
-      "img": "assets/img/imgShop/pendientes-apatito1-006.jpg"
+      "url": "img/imgShop/8_pendientes-apatito1-006.jpg"
     },
     {
       "id": 9,
-      "name": "Pendientes plata y turquesas",
-      "description": "Pendientes de plata con colgante de turquesas reconstituas",
-      "price": 40,
+      "titulo": "Pendientes plata y turquesas",
+      "descripcion": "Pendientes de plata con colgante de turquesas reconstituas",
+      "precio": 40,
       "type": "Pendientes",
       "material": "Plata y turquesas",
       "size": "M",
-      "img": "assets/img/imgShop/pendientes-turquesa-001.jpeg"
+      "url": "img/imgShop/9_pendientes-turquesa-001.jpeg"
     },
     {
       "id": 10,
-      "name": "Pulsera plata amonite",
-      "description": "Pulsera de plata engarzado con fósil amonite",
-      "price": 145,
+      "titulo": "Pulsera plata amonite",
+      "descripcion": "Pulsera de plata engarzado con fósil amonite",
+      "precio": 145,
       "type": "Pulseras",
       "material": "Plata y fósil amonite",
       "size": "XL",
-      "img": "assets/img/imgShop/pulsera-amonite-006.jpg"
+      "url": "img/imgShop/10_pulsera-amonite-006.jpg"
     },
     {
       "id": 11,
-      "name": "Pulsera plata calada flores",
-      "description": "Pulsera de plata con calado botánico",
-      "price": 185,
+      "titulo": "Pulsera plata calada flores",
+      "descripcion": "Pulsera de plata con calado botánico",
+      "precio": 185,
       "type": "Pulseras",
       "material": "Plata",
       "size": "XL",
-      "img": "assets/img/imgShop/pulsera-calada-flores1-005.jpg"
+      "url": "img/imgShop/11_pulsera-calada-flores1-005.jpg"
     },
     {
       "id": 12,
-      "name": "Pulsera plata flores",
-      "description": "Pulsera de plata con textura botánica",
-      "price": 130,
+      "titulo": "Pulsera plata flores",
+      "descripcion": "Pulsera de plata con textura botánica",
+      "precio": 130,
       "type": "Pulseras",
       "material": "Plata",
       "size": "L",
-      "img": "assets/img/imgShop/pulsera-flores-001.jpg"
-    },
-    {
-      "id": 13,
-      "name": "Articulo de ANILLOS",
-      "description": "Anillo de plata engarzado con turmalina rosa hidrotermal",
-      "price": 45,
-      "type": "Anillos",
-      "img": "assets/img/imgShop/anillo-fresa-003.jpeg",
-      "material": "Plata y turmalina rosa hidrotermal",
-      "size": 16
+      "url": "img/imgShop/12_pulsera-flores-001.jpg"
     }
   ],
   "type": [
     {
       "id": 1,
-      "name": "Anillos"
+      "titulo": "Anillos"
     },
     {
       "id": 2,
-      "name": "Colgantes"
+      "titulo": "Colgantes"
     },
     {
       "id": 3,
-      "name": "Pendientes"
+      "titulo": "Pendientes"
     },
     {
       "id": 4,
-      "name": "Pulseras"
+      "titulo": "Pulseras"
     }
   ]
 }
