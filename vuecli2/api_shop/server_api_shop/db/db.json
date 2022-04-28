@@ -6,7 +6,7 @@
       "descripcion": "Anillo de plata engarzado con turmalina rosa hidrotermal",
       "precio": "45",
       "type": "Anillos",
-      "url": "img/1_anillo-erizo-010.jpg",
+      "url": "http://localhost:3000/assets/img/1_anillo-fresa-003.jpeg",
       "material": "Plata",
       "size": 14
     },
@@ -16,7 +16,7 @@
       "descripcion": "Anillo de plata con forma de erizo",
       "precio": 25,
       "type": "Anillos",
-      "url": "http://localhost:3000/img/2_anillo-erizo-010.jpg",
+      "url": "http://localhost:3000/assets/img/2_anillo-erizo-010.jpg",
       "material": "Plata",
       "size": 14
     },
@@ -26,7 +26,7 @@
       "descripcion": "Anillo de plata engarzado con ópalo azul de Australia",
       "precio": 55,
       "type": "Anillos",
-      "url": "img/imgShop/3_anillo-opalo-002.jpeg",
+      "url": "http://localhost:3000/assets/img/3_anillo-opalo-002.jpeg",
       "material": "Plata y ópalo azul de Australia",
       "size": 18
     },
@@ -36,7 +36,7 @@
       "descripcion": "Colgante grande, con forma de hoja, realizado en plata",
       "precio": 60,
       "type": "Colgantes",
-      "url": "img/imgShop/4_colgante-hoja-002.jpg",
+      "url": "http://localhost:3000/assets/img/4_colgante-hoja-002.jpg",
       "material": "Oro y Plata",
       "size": "XL"
     },
@@ -48,7 +48,7 @@
       "type": "Colgantes",
       "material": "Plata",
       "size": "XL",
-      "url": "img/imgShop/5_colgante-nenufar-009.jpeg"
+      "url": "http://localhost:3000/assets/img/5_colgante-nenufar-009.jpeg"
     },
     {
       "id": 6,
@@ -58,7 +58,7 @@
       "type": "Colgantes",
       "material": "Plata",
       "size": "XL",
-      "url": "img/imgShop/6_colgante-edelweis-011.jpg"
+      "url": "http://localhost:3000/assets/img/6_colgante-edelweis-011.jpg"
     },
     {
       "id": 7,
@@ -68,7 +68,7 @@
       "type": "Pendientes",
       "material": "Plata",
       "size": "M",
-      "url": "img/imgShop/7_pendientes-estrella2-015.jpg"
+      "url": "http://localhost:3000/assets/img/7_pendientes-estrella2-015.jpg"
     },
     {
       "id": 8,
@@ -78,7 +78,7 @@
       "type": "Pendientes",
       "material": "Plata, perla cultivada, apatito facetado con cuarzo de roca",
       "size": "M",
-      "url": "img/imgShop/8_pendientes-apatito1-006.jpg"
+      "url": "http://localhost:3000/assets/img/8_pendientes-apatito1-006.jpg"
     },
     {
       "id": 9,
@@ -88,7 +88,7 @@
       "type": "Pendientes",
       "material": "Plata y turquesas",
       "size": "M",
-      "url": "img/imgShop/9_pendientes-turquesa-001.jpeg"
+      "url": "http://localhost:3000/assets/img/9_pendientes-turquesa-001.jpeg"
     },
     {
       "id": 10,
@@ -98,7 +98,7 @@
       "type": "Pulseras",
       "material": "Plata y fósil amonite",
       "size": "XL",
-      "url": "img/imgShop/10_pulsera-amonite-006.jpg"
+      "url": "http://localhost:3000/assets/img/10_pulsera-amonite-006.jpg"
     },
     {
       "id": 11,
@@ -108,7 +108,7 @@
       "type": "Pulseras",
       "material": "Plata",
       "size": "XL",
-      "url": "img/imgShop/11_pulsera-calada-flores1-005.jpg"
+      "url": "http://localhost:3000/assets/img/11_pulsera-calada-flores-005.jpg"
     },
     {
       "id": 12,
@@ -118,7 +118,7 @@
       "type": "Pulseras",
       "material": "Plata",
       "size": "L",
-      "url": "img/imgShop/12_pulsera-flores-001.jpg"
+      "url": "http://localhost:3000/assets/img/12_pulsera-flores-001.jpg"
     }
   ],
   "type": [

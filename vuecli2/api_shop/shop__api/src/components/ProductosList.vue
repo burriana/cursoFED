@@ -34,10 +34,10 @@
             <div class="d-flex align-items-center">
               <div class="flex-shrink-0">
 
-            <img width="300" height="100" :src="producto.url" :alt="producto.titulo" :title="producto.titulo">
+            <img width="60" height="60" :src="producto.url" :alt="producto.titulo" :title="producto.titulo">
           </div>
               <div class="flex-grow-1 ms-3">
-                <!-- {{ producto.titulo }} -->
+                {{ producto.titulo }}
               </div>
             </div>
           </li>
