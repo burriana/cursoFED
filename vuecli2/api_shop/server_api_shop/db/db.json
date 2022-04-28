@@ -119,6 +119,30 @@
       "material": "Plata",
       "size": "L",
       "url": "http://localhost:3000/assets/img/12_pulsera-flores-001.jpg"
+    },
+    {
+      "titulo": "pikachu",
+      "url": "https://cdn.custom-cursor.com/cursors/pokemon_pikachu_908.png",
+      "descripcion": "",
+      "precio": 0,
+      "type": "",
+      "id": 14
+    },
+    {
+      "titulo": "",
+      "url": "https://thumbs.dreamstime.com/z/reloj-del-tiempo-infinito-en-fondo-amarillento-18900397.jpg",
+      "descripcion": "",
+      "precio": 0,
+      "type": "",
+      "id": 15
+    },
+    {
+      "titulo": "Rolex",
+      "url": "https://cdn.luxe.digital/media/2019/09/12091054/most-expensive-rolex-watches-luxe-digital.jpg",
+      "descripcion": "Reloj rolex executive",
+      "precio": 80,
+      "type": "",
+      "id": 16
     }
   ],
   "type": [

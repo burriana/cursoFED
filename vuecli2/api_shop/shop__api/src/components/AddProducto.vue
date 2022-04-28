@@ -12,8 +12,11 @@
           name="titulo"
         />
       </div>
-      <!-- <div class="form-group">
-        <label for="imagen">Imagen</label>
+      <div class="form-group">
+         <img width="60" height="60" :src="producto.url" :alt="producto.titulo" :title="producto.titulo">
+      </div>
+      <div class="form-group">
+        <label for="imagen">Image</label>
         <input
           type="text"
           class="form-control"
@@ -23,7 +26,7 @@
           name="imagen"
           placeholder="http://"
         />
-      </div> -->
+      </div>
       <div class="form-group">
         <label for="descripcion">Description</label>
         <input
@@ -56,7 +59,7 @@
       <button @click="saveProducto" class="btn btn-success">Submit</button>
     </div>
     <div v-else class="mt-2">
-      <h4>¡Lo enviaste con éxito!</h4>
+      <h4>The submit was successfully 🌝!</h4>
       <button class="btn btn-success" @click="newProducto">Añadir</button>
     </div>
   </div>

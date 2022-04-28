@@ -13,18 +13,29 @@
           name="titulo"
         />
       </div>
-      <!-- <div class="form-group">
+      <div class="form-group">
+        <img
+          width="60"
+          height="60"
+          :src="currentProducto.url"
+          :alt="currentProducto.titulo"
+          :title="currentProducto.titulo"
+        />
+      </div>
+
+      <div class="form-group">
         <label for="imagen">Imagen</label>
         <input
           type="text"
-          class="form-control"
+          class="form-control mb-3"
           id="imagen"
           required
           v-model="currentProducto.url"
           name="imagen"
           placeholder="http://"
         />
-      </div> -->
+      </div>
+
       <div class="form-group">
         <label for="descripcion">Description</label>
         <input
@@ -56,12 +67,33 @@
         >
           <option value="One">One</option>
           <option value="Two">Two</option>
-          
-          
         </select>
       </div>
+      <div class="form-group">
+        <label for="descripcion">Size</label>
+        <input
+          class="form-control mb-3"
+          id="descripcion"
+          required
+          v-model="currentProducto.size"
+          name="descripcion"
+        />
+      </div>
+      <div class="form-group">
+        <label for="descripcion">Material</label>
+        <input
+          class="form-control mb-3"
+          id="descripcion"
+          required
+          v-model="currentProducto.material"
+          name="descripcion"
+        />
+      </div>
     </form>
-    <button class="btn btn-primary m-2" @click="backToList">Back to List</button>
+
+    <router-link to="/productos" class="btn btn-primary"
+      >Back to List</router-link
+    >
     <button class="btn btn-danger m-2" @click="deleteProducto">Delete</button>
     <button type="submit" class="btn btn-success m-2" @click="updateProducto">
       Update
@@ -86,8 +118,14 @@ export default {
   },
   methods: {
     backToList() {
-      ProductoDataService.getAll()
+      ProductoDataService.getAll();
     },
+    // getType() {
+    //   ProductoDataService.get()
+    //   .then(response) => {
+
+    //   }
+    // },
     getProducto(id) {
       ProductoDataService.get(id)
         .then((response) => {
@@ -99,6 +137,7 @@ export default {
         });
     },
     updateProducto() {
+      this.currentProducto.precio = +this.currentProducto.precio
       ProductoDataService.update(this.currentProducto.id, this.currentProducto)
         .then((response) => {
           console.log(response.data);
